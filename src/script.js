@@ -160,90 +160,93 @@ window.addEventListener("load", () => {
     let greenPointer = document.querySelector(".movie-pointer");
     let smallerPoints = document.querySelectorAll(".outer-point-fill");
     let networkLines = document.querySelectorAll(".network-line");
+    let fullyOpenSvg = false;
 
     pointerCircles.forEach((circle, index) => {
         circle.addEventListener("click", () => {
             switch (index) {
                 case 0:
-                    window.location.href = window.location.href + "/about-us";
+                    window.location.href = window.location.href + "about-us";
                     break;
                 case 1:
-                    window.location.href = window.location.href + "/contact";
+                    window.location.href = window.location.href + "contact";
                     break;
                 case 2:
-                    window.location.href = window.location.href + "/courses";
+                    window.location.href = window.location.href + "courses";
                     break;
                 case 3:
-                    window.location.href = window.location.href + "/articles";
+                    window.location.href = window.location.href + "articles";
                     break;
                 case 4:
-                    window.location.href = window.location.href + "/certificates";
+                    window.location.href = window.location.href + "certificates";
                     break;
                 default:
                     break;
             }
         })
         circle.addEventListener("mouseover", () => {
-            circle.classList.add("active");
-            pointerTexts[index].classList.add("active");
-            switch (index) {
-                case 0:
-                    greenPointer.style.offsetDistance = "62.55%";
-                    break;
-                case 1:
-                    greenPointer.style.offsetDistance = "87.5%";
-                    break;
-                case 2:
-                    greenPointer.style.offsetDistance = "6.5%";
-                    break;
-                case 3:
-                    greenPointer.style.offsetDistance = "43.6%";
-                    break;
-                case 4:
-                    greenPointer.style.offsetDistance = "24.97%";
-                    break;
-                default:
-                    break;
-            }
-
-            pointerCircles.forEach((c, i) => {
-                if (i !== index) {
-                    c.classList.remove("active");
-                    pointerTexts[i].classList.remove("active");
+            if (fullyOpenSvg) {
+                circle.classList.add("active");
+                pointerTexts[index].classList.add("active");
+                switch (index) {
+                    case 0:
+                        greenPointer.style.offsetDistance = "62.55%";
+                        break;
+                    case 1:
+                        greenPointer.style.offsetDistance = "87.5%";
+                        break;
+                    case 2:
+                        greenPointer.style.offsetDistance = "6.5%";
+                        break;
+                    case 3:
+                        greenPointer.style.offsetDistance = "43.6%";
+                        break;
+                    case 4:
+                        greenPointer.style.offsetDistance = "24.97%";
+                        break;
+                    default:
+                        break;
                 }
-            });
+
+                pointerCircles.forEach((c, i) => {
+                    if (i !== index) {
+                        c.classList.remove("active");
+                        pointerTexts[i].classList.remove("active");
+                    }
+                });
+            }
         });
-
-
         circle.addEventListener("touchmove", () => {
-            circle.classList.add("active");
-            pointerTexts[index].classList.add("active");
-            switch (index) {
-                case 0:
-                    greenPointer.style.offsetDistance = "62.55%";
-                    break;
-                case 1:
-                    greenPointer.style.offsetDistance = "87.5%";
-                    break;
-                case 2:
-                    greenPointer.style.offsetDistance = "6.5%";
-                    break;
-                case 3:
-                    greenPointer.style.offsetDistance = "43.6%";
-                    break;
-                case 4:
-                    greenPointer.style.offsetDistance = "24.97%";
-                    break;
-                default:
-                    break;
-            }
-
-            pointerCircles.forEach((c, i) => {
-                if (i !== index) {
-                    c.classList.remove("active");
-                    pointerTexts[i].classList.remove("active");
+            if (fullyOpenSvg) {
+                circle.classList.add("active");
+                pointerTexts[index].classList.add("active");
+                switch (index) {
+                    case 0:
+                        greenPointer.style.offsetDistance = "62.55%";
+                        break;
+                    case 1:
+                        greenPointer.style.offsetDistance = "87.5%";
+                        break;
+                    case 2:
+                        greenPointer.style.offsetDistance = "6.5%";
+                        break;
+                    case 3:
+                        greenPointer.style.offsetDistance = "43.6%";
+                        break;
+                    case 4:
+                        greenPointer.style.offsetDistance = "24.97%";
+                        break;
+                    default:
+                        break;
                 }
-            });
+
+                pointerCircles.forEach((c, i) => {
+                    if (i !== index) {
+                        c.classList.remove("active");
+                        pointerTexts[i].classList.remove("active");
+                    }
+                });
+            }
         });
     });
 
@@ -261,6 +264,7 @@ window.addEventListener("load", () => {
 
 
     setTimeout(() => {
+        fullyOpenSvg = true;
         smallerPoints.forEach((opf) => {
             opf.classList.add("show");
         });
