@@ -37,7 +37,6 @@ let mixer = null
 let daimondObj;
 
 const objLoader = new OBJLoader()
-objLoader.setMaterials(materials)
 
 objLoader.load('https://alireza4791.github.io/3d-daimond/dist/models/daimond/Diamond.obj', object => {
     daimondObj = object;
