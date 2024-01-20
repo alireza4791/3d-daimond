@@ -154,8 +154,6 @@ const tick = () => {
 tick()
 
 
-
-
 window.addEventListener("load", () => {
     let pointerCircles = document.querySelectorAll(".outer-point-stroke");
     let pointerTexts = document.querySelectorAll(".outer-point-text");
@@ -164,6 +162,27 @@ window.addEventListener("load", () => {
     let networkLines = document.querySelectorAll(".network-line");
 
     pointerCircles.forEach((circle, index) => {
+        circle.addEventListener("click", () => {
+            switch (index) {
+                case 0:
+                    window.location.href = window.location.href + "/about-us";
+                    break;
+                case 1:
+                    window.location.href = window.location.href + "/contact";
+                    break;
+                case 2:
+                    window.location.href = window.location.href + "/courses";
+                    break;
+                case 3:
+                    window.location.href = window.location.href + "/articles";
+                    break;
+                case 4:
+                    window.location.href = window.location.href + "/certificates";
+                    break;
+                default:
+                    break;
+            }
+        })
         circle.addEventListener("mouseover", () => {
             circle.classList.add("active");
             pointerTexts[index].classList.add("active");
@@ -194,6 +213,7 @@ window.addEventListener("load", () => {
                 }
             });
         });
+
 
         circle.addEventListener("touchmove", () => {
             circle.classList.add("active");
