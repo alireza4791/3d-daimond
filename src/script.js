@@ -46,7 +46,7 @@ mtlLoader.load('Diamond.mtl', materials => {
     const objLoader = new OBJLoader()
     objLoader.setMaterials(materials)
 
-    objLoader.load('/models/daimond/Diamond.obj', object => {
+    objLoader.load('alireza4791.github.io/3d-daimond/dist/models/daimond/Diamond.obj', object => {
         console.log(object)
         daimondObj = object;
         daimondObj.position.y = 0.925;
