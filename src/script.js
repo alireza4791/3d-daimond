@@ -7,8 +7,7 @@ import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js';
 const svgContent = `<svg data-v-5b63246b="" version="1.1" id="diamonds-svg-id" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1379.3333740234375 817.0729370117188" xml:space="preserve" preserveAspectRatio="none" > <path data-v-5b63246b="" d="M561.5905041351318,278.5197374038696L631.4502402496338,276.5791891784668L747.8831337738037,276.5791891784668L817.7428698883057,278.5197374038696L817.7428698883057,532.7315549316406L561.5905041351318,532.7315549316406L561.5905041351318,278.5197374038696" class="network-line" ></path> <path data-v-5b63246b="" d="M509.1957020492554,406.59592028045654L689.6666870117188,226.1249353179932L870.1376719741821,406.59592028045654L689.6666870117188,587.0669052429199L509.1957020492554,406.59592028045654" class="network-line" ></path> <path data-v-5b63246b="" d="M689.6666870117188,587.0669052429199L598.4609204177857,627.8184179763794L561.5905041351318,532.7315549316406L470.3847375411988,499.7422350997925L509.1957020492554,406.59592028045654L468.44418931579594,315.39015368652343L561.5905041351318,278.5197374038696L598.4609204177857,183.4328743591309L689.6666870117188,226.1249353179932L780.8724536056518,183.4328743591309L817.7428698883057,278.5197374038696L910.8891847076416,313.4496054611206L870.1376719741821,406.59592028045654L910.8891847076416,499.7422350997925L817.7428698883057,533.8958838668823L780.8724536056518,627.8184179763794L689.6666870117188,587.0669052429199" class="network-line" ></path> <path data-v-5b63246b="" d="M689.6666870117188,645.2833520050049L598.4609204177857,627.8184179763794L518.8984431762696,573.4830676651001L470.3847375411988,499.7422350997925L450.9792552871704,408.5364685058594L468.44418931579594,317.33070191192627L517.9281690635681,237.76822467041015L598.4609204177857,183.4328743591309L689.6666870117188,165.96794033050537L780.8724536056518,183.4328743591309L861.4052049598694,237.76822467041015L912.8297329330444,317.33070191192627L928.3541187362671,408.5364685058594L908.9486364822387,499.7422350997925L860.434930847168,573.4830676651001L780.8724536056518,627.8184179763794L689.6666870117188,645.2833520050049" class="network-line" ></path> <path data-v-5b63246b="" d="M689.6666870117188,645.2833520050049L577.1148899383545,676.3321236114502L520.8389914016724,575.4236158905029L421.87103190612794,521.0882655792236L450.9792552871704,408.5364685058594L421.87103190612794,295.98467143249513L518.8984431762696,237.76822467041015L577.1148899383545,140.74081340026856L689.6666870117188,165.96794033050537L802.218484085083,140.74081340026856L860.434930847168,237.76822467041015L957.4623421173096,295.98467143249513L928.3541187362671,408.5364685058594L957.4623421173096,521.0882655792236L858.4943826217651,575.4236158905029L802.218484085083,676.3321236114502L689.6666870117188,645.2833520050049" class="network-line" ></path> <path data-v-5b63246b="" d="M689.6666870117188,590.9480016937256L689.6666870117188,699.6187023162842" class="network-line" ></path> <path data-v-5b63246b="" d="M561.5905041351318,532.7315549316406L482.0280268936157,612.2940321731568" class="network-line" ></path> <path data-v-5b63246b="" d="M507.25515382385254,408.5364685058594L398.58445320129397,408.5364685058594" class="network-line" ></path> <path data-v-5b63246b="" d="M563.5310523605347,278.5197374038696L485.90912334442135,202.83835661315916" class="network-line" ></path> <path data-v-5b63246b="" d="M689.6666870117188,226.1249353179932L689.6666870117188,117.4542346954346" class="network-line" ></path> <path data-v-5b63246b="" d="M817.7428698883057,278.5197374038696L895.364798904419,200.89780838775633" class="network-line" ></path> <path data-v-5b63246b="" d="M872.078220199585,406.59592028045654L980.7489208221435,408.5364685058594" class="network-line" ></path> <path data-v-5b63246b="" d="M817.7428698883057,532.7315549316406L896.9172374847412,614.2345803985596" class="network-line" ></path> <path data-v-5b63246b="" d="M 398.58445320129397, 408.5364685058594a 291.0822338104248,291.0822338104248 0 1,0 582.1644676208496,0a 291.0822338104248,291.0822338104248 0 1,0 -582.1644676208496,0" class="network-line" ></path> <path data-v-5b63246b="" d="M 683.8450423355102, 645.2833520050049a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point" ></path> <path data-v-5b63246b="" d="M 592.6392757415772, 627.8184179763794a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point" ></path> <path data-v-5b63246b="" d="M 515.0173467254639, 573.4830676651001a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point" ></path> <path data-v-5b63246b="" d="M 464.56309286499027, 499.7422350997925a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point" ></path> <path data-v-5b63246b="" d="M 445.1576106109619, 408.5364685058594a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point" ></path> <path data-v-5b63246b="" d="M 464.56309286499027, 317.33070191192627a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point" ></path> <path data-v-5b63246b="" d="M 515.0173467254639, 237.76822467041015a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point" ></path> <path data-v-5b63246b="" d="M 592.6392757415772, 185.37342258453373a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point" ></path> <path data-v-5b63246b="" d="M 683.8450423355102, 167.9084885559082a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point" ></path> <path data-v-5b63246b="" d="M 775.0508089294433, 189.25451903533937a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point" ></path> <path data-v-5b63246b="" d="M 852.6727379455566, 237.76822467041015a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point" ></path> <path data-v-5b63246b="" d="M 905.067540031433, 315.39015368652343a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point" ></path> <path data-v-5b63246b="" d="M 924.4730222854614, 408.5364685058594a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point" ></path> <path data-v-5b63246b="" d="M 903.1269918060302, 499.7422350997925a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point" ></path> <path data-v-5b63246b="" d="M 852.6727379455566, 573.4830676651001a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point" ></path> <path data-v-5b63246b="" d="M 775.0508089294433, 627.8184179763794a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point" ></path> <path data-v-5b63246b="" d="M 683.8450423355102, 587.0669052429199a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point" ></path> <path data-v-5b63246b="" d="M 555.7688594589233, 532.7315549316406a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point" ></path> <path data-v-5b63246b="" d="M 503.37405737304687, 408.5364685058594a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point" ></path> <path data-v-5b63246b="" d="M 555.7688594589233, 280.46028562927245a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point" ></path> <path data-v-5b63246b="" d="M 683.8450423355102, 226.1249353179932a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point" ></path> <path data-v-5b63246b="" d="M 811.9212252120972, 280.46028562927245a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point" ></path> <path data-v-5b63246b="" d="M 866.2565755233765, 408.5364685058594a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point" ></path> <path data-v-5b63246b="" d="M 811.9212252120972, 532.7315549316406a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point" ></path> <path data-v-5b63246b="" d="M 631.4502402496338, 278.5197374038696a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point" ></path> <path data-v-5b63246b="" d="M 736.2398444213867, 278.5197374038696a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point" ></path> <path data-v-5b63246b="" d="M 811.9212252120972, 356.1416664199829a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point" ></path> <path data-v-5b63246b="" d="M 811.9212252120972, 460.9312705917358a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point" ></path> <path data-v-5b63246b="" d="M 738.1803926467895, 534.6721031570435a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point" ></path> <path data-v-5b63246b="" d="M 629.509692024231, 534.6721031570435a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point" ></path> <path data-v-5b63246b="" d="M 555.7688594589233, 460.9312705917358a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point" ></path> <path data-v-5b63246b="" d="M 555.7688594589233, 356.1416664199829a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point" ></path> <path data-v-5b63246b="" d="M 359.7734886932373, 408.5364685058594a 329.89319831848144,329.89319831848144 0 1,0 659.7863966369629,0a 329.89319831848144,329.89319831848144 0 1,0 -659.7863966369629,0" class="outer-circle" ></path> <circle data-v-5b63246b="" r="8" class="movie-pointer" style=" offset-distance: 43%; filter: url('#dropshadow2'); offset-path: path( 'M 359.773 408.536 a 329.893 329.893 0 1 0 659.786 0 a 329.893 329.893 0 1 0 -659.786 0' ); " ></circle> <path data-v-5b63246b="" d="M561.5905041351318,334.79563594055173L635.3313367004395,346.43892529296875L744.002037322998,346.43892529296875L817.7428698883057,334.79563594055173L806.0995805358887,317.33070191192627L728.4776515197753,306.6576866722107L650.8557225036622,306.6576866722107L573.2337934875488,317.33070191192627L561.5905041351318,334.79563594055173" class="network-line flat" ></path> <path data-v-5b63246b="" d="M573.2337934875488,317.33070191192627L522.7795396270752,342.5578288421631L450.008981174469,404.6553720550537L445.1576106109619,415.3283872947693L445.9338299011231,424.06085430908206L447.09815883636475,433.7635954360962L483.9685751190185,460.9312705917358L495.6118644714355,462.87181881713866L515.0173467254639,466.75291526794433L573.2337934875488,474.5151081695557L631.4502402496338,482.277301071167L689.6666870117188,482.277301071167L747.8831337738037,482.277301071167L806.0995805358887,474.5151081695557L864.3160272979736,466.75291526794433L883.721509552002,462.87181881713866L895.364798904419,460.9312705917358L932.2352151870728,433.7635954360962L933.3995441223144,424.06085430908206L934.1757634124756,415.3283872947693L929.3243928489685,404.6553720550537L856.5538343963623,342.5578288421631L806.0995805358887,317.33070191192627" class="network-line flat" ></path> <path data-v-5b63246b="" d="M445.9338299011231,424.06085430908206L522.7795396270752,342.5578288421631L561.5905041351318,334.79563594055173L553.8283112335205,369.7255039978027L445.9338299011231,424.06085430908206" class="network-line flat" ></path> <path data-v-5b63246b="" d="M933.3995441223144,424.06085430908206L856.5538343963623,342.5578288421631L817.7428698883057,334.79563594055173L825.505062789917,369.7255039978027L933.3995441223144,424.06085430908206" class="network-line flat" ></path> <path data-v-5b63246b="" d="M478.14693044281006,457.82639343109133L551.8877630081176,369.7255039978027L631.4502402496338,347.21514458312987L689.6666870117188,380.204464414978L809.9806769866943,472.57455994415284L825.505062789917,369.7255039978027" class="network-line flat" ></path> <path data-v-5b63246b="" d="M901.1864435806274,457.82639343109133L827.4456110153199,369.7255039978027L747.8831337738037,347.21514458312987L689.6666870117188,380.204464414978L569.3526970367432,472.57455994415284L553.8283112335205,369.7255039978027" class="network-line flat" ></path> <path data-v-5b63246b="" d="M689.6666870117188,380.204464414978L689.6666870117188,482.277301071167" class="network-line flat" ></path> <path data-v-5b63246b="" d="M 555.7688594589233, 334.79563594055173a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point flat" ></path> <path data-v-5b63246b="" d="M 629.509692024231, 346.43892529296875a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point flat" ></path> <path data-v-5b63246b="" d="M 738.1803926467895, 346.43892529296875a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point flat" ></path> <path data-v-5b63246b="" d="M 811.9212252120972, 334.79563594055173a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point flat" ></path> <path data-v-5b63246b="" d="M 683.8450423355102, 380.204464414978a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point flat" ></path> <path data-v-5b63246b="" d="M 474.2658339920044, 457.82639343109133a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point flat" ></path> <path data-v-5b63246b="" d="M 893.424250679016, 457.82639343109133a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point flat" ></path> <path data-v-5b63246b="" d="M 440.1121852249146, 424.06085430908206a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point flat" ></path> <path data-v-5b63246b="" d="M 927.5778994461059, 424.06085430908206a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point flat" ></path> <path data-v-5b63246b="" d="M 808.0401287612915, 472.57455994415284a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point flat" ></path> <path data-v-5b63246b="" d="M 559.649955909729, 472.57455994415284a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point flat" ></path> <path data-v-5b63246b="" d="M 683.8450423355102, 482.277301071167a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point flat" ></path> <path data-v-5b63246b="" d="M 548.006666557312, 369.7255039978027a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point flat" ></path> <path data-v-5b63246b="" d="M 819.6834181137085, 369.7255039978027a 5.8216446762084955,5.8216446762084955 0 1,0 11.643289352416991,0a 5.8216446762084955,5.8216446762084955 0 1,0 -11.643289352416991,0" class="inner-point flat" ></path> <g data-v-5b63246b=""> <circle data-v-5b63246b="" r="7.7621929016113285" class="outer-point-fill first-point" style=" offset-distance: 0%; filter: url('#dropshadow'); offset-path: path('M 825 369 L 689.667 377.488'); " ></circle> <circle data-v-5b63246b="" r="7.7621929016113285" class="outer-point-fill first-point" style=" offset-distance: 0%; filter: url('#dropshadow'); offset-path: path('M 554 369 L 689.667 377.488'); " ></circle> <circle data-v-5b63246b="" r="7.7621929016113285" class="outer-point-fill second-point" style=" offset-distance: 0%; filter: url('#dropshadow'); offset-path: path('M 568 473 L 565.472 472.575'); " ></circle> <circle data-v-5b63246b="" r="7.7621929016113285" class="outer-point-fill active third-point" style=" offset-distance: 0%; filter: url('#dropshadow'); offset-path: path('M 813.462 472.088 L 813.862 472.575'); " ></circle> <circle data-v-5b63246b="" r="7.7621929016113285" class="outer-point-fill active third-point" style=" offset-distance: 0%; filter: url('#dropshadow'); offset-path: path('M 689.462 482.088 L 813.862 472.575'); " ></circle> <circle data-v-5b63246b="" r="15.524385803222657" class="outer-point-stroke first-point" style=" offset-distance: 0%; offset-path: path('M 825 369 L 689.667 377.488'); " ></circle> <circle data-v-5b63246b="" r="15.524385803222657" class="outer-point-stroke first-point" style=" offset-distance: 0%; offset-path: path('M 554 369 L 689.667 377.488'); " ></circle> <circle data-v-5b63246b="" r="15.524385803222657" class="outer-point-stroke second-point" style=" offset-distance: 0%; offset-path: path('M 568 473 L 565.472 472.575'); " ></circle> <circle data-v-5b63246b="" r="15.524385803222657" class="outer-point-stroke active third-point" style=" offset-distance: 0%; offset-path: path('M 813.462 472.088 L 813.862 472.575'); " ></circle> <circle data-v-5b63246b="" r="15.524385803222657" class="outer-point-stroke third-point" style=" offset-distance: 0%; offset-path: path('M 689.462 482.088 L 813.862 472.575'); " ></circle> <text data-v-5b63246b="" alignment-baseline="middle" text-anchor="middle" class="outer-point-text top-side" x="869.6666870117188" y="200.4542346954346" > درباره من </text> <text data-v-5b63246b="" alignment-baseline="middle" text-anchor="middle" class="outer-point-text top-side" x="530.6666870117188" y="200.4542346954346" > راه‌های ارتباطی </text> <text data-v-5b63246b="" alignment-baseline="middle" text-anchor="middle" class="outer-point-text left-side top-side" x="491.87103190612794" y="426.0882655792236" > دوره‌های آموزشی </text> <text data-v-5b63246b="" alignment-baseline="middle" text-anchor="middle" class="outer-point-text right-side top-side" x="957.4623421173096" y="521.0882655792236" > مقالات </text> <text data-v-5b63246b="" alignment-baseline="middle" text-anchor="middle" class="outer-point-text right-side top-side" x="715" y="700" > افتخارات </text> </g> <filter data-v-5b63246b="" id="dropshadow" x="-50%" y="-50%" width="200%" height="200%" > <feColorMatrix data-v-5b63246b="" result="matrixOut" in="offOut" type="matrix" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" ></feColorMatrix> <feGaussianBlur data-v-5b63246b="" result="blurOut" in="matrixOut" stdDeviation="7" ></feGaussianBlur> <feBlend data-v-5b63246b="" in="SourceGraphic" in2="blurOut" mode="normal" ></feBlend> </filter> <filter data-v-5b63246b="" id="dropshadow2" x="-50%" y="-50%" width="200%" height="200%" > <feColorMatrix data-v-5b63246b="" result="matrixOut" in="offOut" type="matrix" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" ></feColorMatrix> <feGaussianBlur data-v-5b63246b="" result="blurOut" in="matrixOut" stdDeviation="5" ></feGaussianBlur> <feBlend data-v-5b63246b="" in="SourceGraphic" in2="blurOut" mode="normal" ></feBlend> </filter> </svg>`;
 const svgParent = document.createElement('div');
 svgParent.innerHTML = svgContent;
-svgParent.style.width = "100vw";
-svgParent.style.height = "100vh";
+svgParent.classList.add("svg-wrap");
 document.body.appendChild(svgParent);
 
 
@@ -40,13 +39,40 @@ const objLoader = new OBJLoader()
 
 objLoader.load('https://alireza4791.github.io/3d-daimond/dist/models/daimond/Diamond.obj', object => {
     daimondObj = object;
-    daimondObj.position.y = 0.925;
-    daimondObj.scale.x = 1;
-    daimondObj.scale.y = 1;
-    daimondObj.scale.z = 1;
-    daimondObj.rotation.x = 0.13;
+    daimondObj.position.y = 1.03;
+    if (parseInt(window.getComputedStyle(document.querySelector('.canvas-wrap')).getPropertyValue("width")) <= 991 && parseInt(window.getComputedStyle(document.querySelector('.canvas-wrap')).getPropertyValue("width")) > 768) {
+        daimondObj.scale.x = 0.85;
+        daimondObj.scale.y = 0.85;
+        daimondObj.scale.z = 0.85;
+        daimondObj.position.y = 0.9;
+    } else if (parseInt(window.getComputedStyle(document.querySelector('.canvas-wrap')).getPropertyValue("width")) <= 768 && parseInt(window.getComputedStyle(document.querySelector('.canvas-wrap')).getPropertyValue("width")) > 479) {
+        daimondObj.scale.x = 0.83;
+        daimondObj.scale.y = 0.83;
+        daimondObj.scale.z = 0.83;
+        daimondObj.position.y = 0.9;
+    } else if (parseInt(window.getComputedStyle(document.querySelector('.canvas-wrap')).getPropertyValue("width")) <= 479) {
+        daimondObj.scale.x = 0.62;
+        daimondObj.scale.y = 0.62;
+        daimondObj.scale.z = 0.62;
+        daimondObj.position.y = 0.9;
+    }
+    else {
+        daimondObj.scale.x = 0.9;
+        daimondObj.scale.y = 0.9;
+        daimondObj.scale.z = 0.9;
+    }
+
+    daimondObj.rotation.x = 0.2;
     daimondObj.children[0].material = new THREE.MeshPhongMaterial({
         color: '#3c2660',
+        shininess: 50,
+        // clearcoat: 1,
+        // sheenRoughness: 1,
+        // roughness: 1,
+        // metalness: 0.1,
+        // ior: 2.333,
+        // reflectivity: 1,
+        // iridescence: 1.3,
     })
     scene.add(daimondObj)
 })
@@ -58,7 +84,7 @@ setTimeout(() => {
 
 setTimeout(() => {
     rotateDaimond = false;
-}, 5500)
+}, 5650)
 
 
 /**
@@ -67,29 +93,87 @@ setTimeout(() => {
 const ambientLight = new THREE.AmbientLight(0xffffff, 0.8)
 scene.add(ambientLight)
 
-const directionalLight = new THREE.DirectionalLight(0xffffff, 0.6)
-directionalLight.castShadow = true
-directionalLight.shadow.mapSize.set(1024, 1024)
-directionalLight.shadow.camera.far = 15
-directionalLight.shadow.camera.left = - 7
-directionalLight.shadow.camera.top = 7
-directionalLight.shadow.camera.right = 7
-directionalLight.shadow.camera.bottom = - 7
-directionalLight.position.set(- 5, 5, 0)
-scene.add(directionalLight)
+const firstPointLight = new THREE.PointLight(0xffffff, 1.5)
+firstPointLight.castShadow = true
+firstPointLight.shadow.mapSize.set(1024, 1024)
+firstPointLight.shadow.camera.far = 15
+firstPointLight.shadow.camera.left = - 7
+firstPointLight.shadow.camera.top = 7
+firstPointLight.shadow.camera.right = 7
+firstPointLight.shadow.camera.bottom = - 7
+firstPointLight.position.set(0, -3, 1)
+scene.add(firstPointLight)
+
+const secondPointLight = new THREE.PointLight(0xffffff, 1.5)
+secondPointLight.castShadow = true
+secondPointLight.shadow.mapSize.set(1024, 1024)
+secondPointLight.shadow.camera.far = 15
+secondPointLight.shadow.camera.left = - 7
+secondPointLight.shadow.camera.top = 7
+secondPointLight.shadow.camera.right = 7
+secondPointLight.shadow.camera.bottom = - 7
+secondPointLight.position.set(3.5, 3.5, 1)
+scene.add(secondPointLight)
+
+const thirdPointLight = new THREE.PointLight(0xffffff, 1.5)
+thirdPointLight.castShadow = true
+thirdPointLight.shadow.mapSize.set(1024, 1024)
+thirdPointLight.shadow.camera.far = 15
+thirdPointLight.shadow.camera.left = - 7
+thirdPointLight.shadow.camera.top = 7
+thirdPointLight.shadow.camera.right = 7
+thirdPointLight.shadow.camera.bottom = - 7
+thirdPointLight.position.set(-3.5, 3.5, 1)
+scene.add(thirdPointLight)
+
+const fourthPointLight = new THREE.PointLight(0xffffff, 1.5)
+fourthPointLight.castShadow = true
+fourthPointLight.shadow.mapSize.set(1024, 1024)
+fourthPointLight.shadow.camera.far = 15
+fourthPointLight.shadow.camera.left = - 7
+fourthPointLight.shadow.camera.top = 7
+fourthPointLight.shadow.camera.right = 7
+fourthPointLight.shadow.camera.bottom = - 7
+fourthPointLight.position.set(3.5, 0, 1)
+scene.add(fourthPointLight)
+
+const fithPointLight = new THREE.PointLight(0xffffff, 1.5)
+fithPointLight.castShadow = true
+fithPointLight.shadow.mapSize.set(1024, 1024)
+fithPointLight.shadow.camera.far = 15
+fithPointLight.shadow.camera.left = - 7
+fithPointLight.shadow.camera.top = 7
+fithPointLight.shadow.camera.right = 7
+fithPointLight.shadow.camera.bottom = - 7
+fithPointLight.position.set(-3.5, 0, 1)
+scene.add(fithPointLight)
+
+const centerLight = new THREE.PointLight(0xffffff, 0.8)
+centerLight.castShadow = true
+centerLight.shadow.mapSize.set(1024, 1024)
+centerLight.shadow.camera.far = 15
+centerLight.shadow.camera.left = - 7
+centerLight.shadow.camera.top = 7
+centerLight.shadow.camera.right = 7
+centerLight.shadow.camera.bottom = - 7
+centerLight.position.set(0, 1, 0.45)
+scene.add(centerLight)
+
+
 
 /**
  * Sizes
  */
 const sizes = {
-    width: window.innerWidth,
-    height: window.innerHeight
+    width: parseInt(window.getComputedStyle(document.querySelector('.canvas-wrap')).getPropertyValue("width")),
+    height: parseInt(window.getComputedStyle(document.querySelector('.canvas-wrap')).getPropertyValue("height"))
 }
 
-window.addEventListener('resize', () => {
+const resize = () => {
+
     // Update sizes
-    sizes.width = window.innerWidth
-    sizes.height = window.innerHeight
+    sizes.width = parseInt(window.getComputedStyle(document.querySelector('.canvas-wrap')).getPropertyValue("width"))
+    sizes.height = parseInt(window.getComputedStyle(document.querySelector('.canvas-wrap')).getPropertyValue("height"))
 
     // Update camera
     camera.aspect = sizes.width / sizes.height
@@ -98,6 +182,9 @@ window.addEventListener('resize', () => {
     // Update renderer
     renderer.setSize(sizes.width, sizes.height)
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+}
+window.addEventListener('resize', () => {
+    resize();
 })
 
 /**
@@ -134,7 +221,7 @@ const tick = () => {
     previousTime = elapsedTime
     if (daimondObj) {
         daimondObj.rotation.y += deltaTime / 5.5;
-        if (rotateDaimond) {
+        if (rotateDaimond && daimondObj.rotation.x <= 1.52) {
             daimondObj.rotation.x += deltaTime / 1.4;
         }
     }
@@ -155,6 +242,7 @@ tick()
 
 
 window.addEventListener("load", () => {
+    resize();
     let pointerCircles = document.querySelectorAll(".outer-point-stroke");
     let pointerTexts = document.querySelectorAll(".outer-point-text");
     let greenPointer = document.querySelector(".movie-pointer");
@@ -264,6 +352,8 @@ window.addEventListener("load", () => {
 
 
     setTimeout(() => {
+        document.querySelector('#diamonds-svg-id[data-v-5b63246b]').classList.add("open");
+        document.querySelector('.canvas-wrap > img').style.opacity = '1';
         fullyOpenSvg = true;
         smallerPoints.forEach((opf) => {
             opf.classList.add("show");

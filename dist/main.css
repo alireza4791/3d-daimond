@@ -37,13 +37,18 @@ body {
   }
 }
 #diamonds-svg-id[data-v-5b63246b] {
-  position: absolute;
+  /* position: absolute;
   left: 0;
-  top: 20px;
-  width: 100%;
+  top: 0; */
+  width: 85%;
   height: 100vh;
   min-height: 600px;
   z-index: 15;
+  transition: all 0.3s ease-in-out;
+}
+#diamonds-svg-id[data-v-5b63246b].open {
+  width: 86%;
+  height: 100vh;
 }
 #diamonds-svg-id .network-line.show[data-v-5b63246b] {
   opacity: 0.5;
@@ -157,16 +162,86 @@ body {
   -webkit-clip-path: inset(0 0 0 0);
   clip-path: inset(0 0 0 0);
 }
-@media all and (max-width: 767px) {
+.svg-wrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.canvas-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.canvas-wrap > img {
+  width: 3vw;
+  height: 3vw;
+  z-index: 20;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+@media all and (max-width: 991px) {
   #diamonds-svg-id[data-v-5b63246b] {
+    width: 125vw;
+    transform: translateY(30px);
+  }
+  #diamonds-svg-id[data-v-5b63246b].open {
+    width: 125vw;
+    
+  }
+  .svg-wrap {
+    width: 125vw;
+    left: -12.5%;
+  }
+}
+@media all and (max-width: 767px) {
+  /* #diamonds-svg-id[data-v-5b63246b] {
     width: 150vw;
     left: -25%;
   }
-}
-@media all and (max-width: 478px) {
+  #diamonds-svg-id[data-v-5b63246b].open {
+    width: 150vw;
+    left: -25%;
+    height: 100vh;
+  } */
+  .canvas-wrap > img {
+    width: 8vw;
+    height: 8vw;
+  }
   #diamonds-svg-id[data-v-5b63246b] {
     width: 200vw;
+    transform: translateY(30px);
+  }
+  #diamonds-svg-id[data-v-5b63246b].open {
+    width: 200vw;
+  }
+  .svg-wrap {
+    width: 200vw;
     left: -50%;
+  }
+}
+@media all and (max-width: 478px) {
+  /* #diamonds-svg-id[data-v-5b63246b] {
+    width: 200vw;
+    left: -50%;
+  } */
+  #diamonds-svg-id[data-v-5b63246b] {
+    width: 400vw;
+    left: -100%;
+  }
+  #diamonds-svg-id[data-v-5b63246b].open {
+    height: 80vh;
+    min-height: auto;
   }
 }
 
