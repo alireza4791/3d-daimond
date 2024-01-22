@@ -892,10 +892,10 @@ window.addEventListener("load", () => {
                 window.location.href = window.location.href + "courses";
                 break;
             case 3:
-                window.location.href = window.location.href + "articles";
+                window.location.href = window.location.href + "certificates";
                 break;
             case 4:
-                window.location.href = window.location.href + "certificates";
+                window.location.href = window.location.href + "articles";
                 break;
             default:
                 break;
