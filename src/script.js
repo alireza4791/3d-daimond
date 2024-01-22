@@ -614,6 +614,7 @@ let daimondObj;
 const objLoader = new OBJLoader()
 var browserName = navigator.appName;
 var nAgt = navigator.userAgent;
+var verOffset;
 
 objLoader.load('https://alireza4791.github.io/3d-daimond/dist/models/daimond/Diamond.obj', object => {
     daimondObj = object;
