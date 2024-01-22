@@ -262,6 +262,9 @@ body {
   } */
 }
 @media all and (max-width: 767px) {
+  .svg-wrap {
+    height: 100dvh;
+  }
   /* .canvas-wrap > img {
     width: 8vw;
     height: 8vw;
@@ -293,4 +296,5 @@ body {
     min-height: auto;
     transform: translateY(20px);
   }
+
 }
