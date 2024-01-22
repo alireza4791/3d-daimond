@@ -615,69 +615,69 @@ const objLoader = new OBJLoader()
 var browserName = navigator.appName;
 var nAgt = navigator.userAgent;
 var verOffset;
-var fullVersion  = ''+parseFloat(navigator.appVersion);
+var fullVersion = '' + parseFloat(navigator.appVersion);
 
 objLoader.load('https://alireza4791.github.io/3d-daimond/dist/models/daimond/Diamond.obj', object => {
-    daimondObj = object;
-    daimondObj.position.y = 1.01;
-    if (parseInt(window.getComputedStyle(document.querySelector('.canvas-wrap')).getPropertyValue("width")) <= 991 && parseInt(window.getComputedStyle(document.querySelector('.canvas-wrap')).getPropertyValue("width")) > 768) {
-        daimondObj.scale.x = 0.85;
-        daimondObj.scale.y = 0.85;
-        daimondObj.scale.z = 0.85;
-        daimondObj.position.y = 0.9;
-    } else if (parseInt(window.getComputedStyle(document.querySelector('.canvas-wrap')).getPropertyValue("width")) <= 768 && parseInt(window.getComputedStyle(document.querySelector('.canvas-wrap')).getPropertyValue("width")) > 479) {
-        daimondObj.scale.x = 0.83;
-        daimondObj.scale.y = 0.83;
-        daimondObj.scale.z = 0.83;
-        daimondObj.position.y = 0.9;
-    } else if (parseInt(window.getComputedStyle(document.querySelector('.canvas-wrap')).getPropertyValue("width")) <= 479) {
-        if ((verOffset = nAgt.indexOf("Safari")) != -1) {
-            browserName = "Safari";
-            fullVersion = nAgt.substring(verOffset + 7);
-            if ((verOffset = nAgt.indexOf("Version")) != -1)
-                fullVersion = nAgt.substring(verOffset + 8);
-        }
-        if (browserName === "Safari") {
-            daimondObj.scale.x = 0.58;
-            daimondObj.scale.y = 0.58;
-            daimondObj.scale.z = 0.58;
-            daimondObj.position.y = 1.08;
-        } else {
-            daimondObj.scale.x = 0.45;
-            daimondObj.scale.y = 0.45;
-            daimondObj.scale.z = 0.45;
-            daimondObj.position.y = 0.93;
-        }
-
+  daimondObj = object;
+  daimondObj.position.y = 1.01;
+  if (parseInt(window.getComputedStyle(document.querySelector('.canvas-wrap')).getPropertyValue("width")) <= 991 && parseInt(window.getComputedStyle(document.querySelector('.canvas-wrap')).getPropertyValue("width")) > 768) {
+    daimondObj.scale.x = 0.85;
+    daimondObj.scale.y = 0.85;
+    daimondObj.scale.z = 0.85;
+    daimondObj.position.y = 0.9;
+  } else if (parseInt(window.getComputedStyle(document.querySelector('.canvas-wrap')).getPropertyValue("width")) <= 768 && parseInt(window.getComputedStyle(document.querySelector('.canvas-wrap')).getPropertyValue("width")) > 479) {
+    daimondObj.scale.x = 0.83;
+    daimondObj.scale.y = 0.83;
+    daimondObj.scale.z = 0.83;
+    daimondObj.position.y = 0.9;
+  } else if (parseInt(window.getComputedStyle(document.querySelector('.canvas-wrap')).getPropertyValue("width")) <= 479) {
+    if ((verOffset = nAgt.indexOf("Safari")) != -1) {
+      browserName = "Safari";
+      fullVersion = nAgt.substring(verOffset + 7);
+      if ((verOffset = nAgt.indexOf("Version")) != -1)
+        fullVersion = nAgt.substring(verOffset + 8);
     }
-    else {
-        daimondObj.scale.x = 0.9;
-        daimondObj.scale.y = 0.9;
-        daimondObj.scale.z = 0.9;
+    if (browserName === "Safari") {
+      daimondObj.scale.x = 0.45;
+      daimondObj.scale.y = 0.45;
+      daimondObj.scale.z = 0.45;
+      daimondObj.position.y = 0.93;
+    } else {
+      daimondObj.scale.x = 0.58;
+      daimondObj.scale.y = 0.58;
+      daimondObj.scale.z = 0.58;
+      daimondObj.position.y = 1.08;
     }
 
-    daimondObj.rotation.x = 0.21;
-    daimondObj.children[0].material = new THREE.MeshPhongMaterial({
-        color: '#3c2660',
-        shininess: 50,
-        // clearcoat: 1,
-        // sheenRoughness: 1,
-        // roughness: 1,
-        // metalness: 0.1,
-        // ior: 2.333,
-        // reflectivity: 1,
-        // iridescence: 1.3,
-    })
-    scene.add(daimondObj)
+  }
+  else {
+    daimondObj.scale.x = 0.9;
+    daimondObj.scale.y = 0.9;
+    daimondObj.scale.z = 0.9;
+  }
+
+  daimondObj.rotation.x = 0.21;
+  daimondObj.children[0].material = new THREE.MeshPhongMaterial({
+    color: '#3c2660',
+    shininess: 50,
+    // clearcoat: 1,
+    // sheenRoughness: 1,
+    // roughness: 1,
+    // metalness: 0.1,
+    // ior: 2.333,
+    // reflectivity: 1,
+    // iridescence: 1.3,
+  })
+  scene.add(daimondObj)
 })
 
 let rotateDaimond = false;
 setTimeout(() => {
-    rotateDaimond = true;
+  rotateDaimond = true;
 }, 3500)
 
 setTimeout(() => {
-    rotateDaimond = false;
+  rotateDaimond = false;
 }, 5650)
 
 
@@ -742,7 +742,7 @@ fithPointLight.shadow.camera.bottom = - 7
 fithPointLight.position.set(-3.5, 0, 1)
 scene.add(fithPointLight)
 
-const centerLight = new THREE.PointLight(0xffffff, 0.8)
+const centerLight = new THREE.DirectionalLight(0xffffff, 1)
 centerLight.castShadow = true
 centerLight.shadow.mapSize.set(1024, 1024)
 centerLight.shadow.camera.far = 15
@@ -750,7 +750,7 @@ centerLight.shadow.camera.left = - 7
 centerLight.shadow.camera.top = 7
 centerLight.shadow.camera.right = 7
 centerLight.shadow.camera.bottom = - 7
-centerLight.position.set(0, 1, 0.45)
+centerLight.position.set(0, 1, 1)
 scene.add(centerLight)
 
 
@@ -759,26 +759,26 @@ scene.add(centerLight)
  * Sizes
  */
 const sizes = {
-    width: parseInt(window.getComputedStyle(document.querySelector('.canvas-wrap')).getPropertyValue("width")),
-    height: parseInt(window.getComputedStyle(document.querySelector('.canvas-wrap')).getPropertyValue("height"))
+  width: parseInt(window.getComputedStyle(document.querySelector('.canvas-wrap')).getPropertyValue("width")),
+  height: parseInt(window.getComputedStyle(document.querySelector('.canvas-wrap')).getPropertyValue("height"))
 }
 
 const resize = () => {
 
-    // Update sizes
-    sizes.width = parseInt(window.getComputedStyle(document.querySelector('.canvas-wrap')).getPropertyValue("width"))
-    sizes.height = parseInt(window.getComputedStyle(document.querySelector('.canvas-wrap')).getPropertyValue("height"))
+  // Update sizes
+  sizes.width = parseInt(window.getComputedStyle(document.querySelector('.canvas-wrap')).getPropertyValue("width"))
+  sizes.height = parseInt(window.getComputedStyle(document.querySelector('.canvas-wrap')).getPropertyValue("height"))
 
-    // Update camera
-    camera.aspect = sizes.width / sizes.height
-    camera.updateProjectionMatrix()
+  // Update camera
+  camera.aspect = sizes.width / sizes.height
+  camera.updateProjectionMatrix()
 
-    // Update renderer
-    renderer.setSize(sizes.width, sizes.height)
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+  // Update renderer
+  renderer.setSize(sizes.width, sizes.height)
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 }
 window.addEventListener('resize', () => {
-    resize();
+  resize();
 })
 
 /**
@@ -794,9 +794,9 @@ scene.add(camera)
  * Renderer
  */
 const renderer = new THREE.WebGLRenderer({
-    canvas: canvas,
-    antialias: true,
-    alpha: true,
+  canvas: canvas,
+  antialias: true,
+  alpha: true,
 })
 renderer.shadowMap.enabled = true
 renderer.shadowMap.type = THREE.PCFSoftShadowMap
@@ -810,204 +810,204 @@ const clock = new THREE.Clock()
 let previousTime = 0
 
 const tick = () => {
-    const elapsedTime = clock.getElapsedTime()
-    const deltaTime = elapsedTime - previousTime
-    previousTime = elapsedTime
-    if (daimondObj) {
-        daimondObj.rotation.y += deltaTime / 5.5;
-        if (rotateDaimond && daimondObj.rotation.x <= 1.52) {
-            daimondObj.rotation.x += deltaTime / 1.4;
-        }
+  const elapsedTime = clock.getElapsedTime()
+  const deltaTime = elapsedTime - previousTime
+  previousTime = elapsedTime
+  if (daimondObj) {
+    daimondObj.rotation.y += deltaTime / 5.5;
+    if (rotateDaimond && daimondObj.rotation.x <= 1.52) {
+      daimondObj.rotation.x += deltaTime / 1.4;
     }
+  }
 
-    // Model animation
-    if (mixer) {
-        mixer.update(deltaTime)
-    }
+  // Model animation
+  if (mixer) {
+    mixer.update(deltaTime)
+  }
 
-    // Render
-    renderer.render(scene, camera)
+  // Render
+  renderer.render(scene, camera)
 
-    // Call tick again on the next frame
-    window.requestAnimationFrame(tick)
+  // Call tick again on the next frame
+  window.requestAnimationFrame(tick)
 }
 
 tick()
 
 
 window.addEventListener("load", () => {
-    resize();
-    let pointerCircles = document.querySelectorAll(".outer-point-stroke");
-    let pointerTexts = document.querySelectorAll(".outer-point-text");
-    let greenPointer = document.querySelector(".movie-pointer");
-    let smallerPoints = document.querySelectorAll(".outer-point-fill");
-    let networkLines = document.querySelectorAll(".network-line");
-    let fullyOpenSvg = false;
-    let menuOptionIndex = 0;
-    let menuChangeTimeout;
+  resize();
+  let pointerCircles = document.querySelectorAll(".outer-point-stroke");
+  let pointerTexts = document.querySelectorAll(".outer-point-text");
+  let greenPointer = document.querySelector(".movie-pointer");
+  let smallerPoints = document.querySelectorAll(".outer-point-fill");
+  let networkLines = document.querySelectorAll(".network-line");
+  let fullyOpenSvg = false;
+  let menuOptionIndex = 0;
+  let menuChangeTimeout;
 
-    const menuOptionHover = (circle, index) => {
+  const menuOptionHover = (circle, index) => {
 
-        if (fullyOpenSvg) {
-            menuOptionIndex = index;
-            pointerCircles.forEach(c => {
-                c.classList.remove("svg-animation")
-                void c.offsetWidth;
-                setTimeout(() => {
-                    c.classList.add("svg-animation")
-                }, 100);
-            })
+    if (fullyOpenSvg) {
+      menuOptionIndex = index;
+      pointerCircles.forEach(c => {
+        c.classList.remove("svg-animation")
+        void c.offsetWidth;
+        setTimeout(() => {
+          c.classList.add("svg-animation")
+        }, 100);
+      })
 
-            clearTimeout(menuChangeTimeout);
-            menuChangeTimeout = setTimeout(() => {
-                if (pointerCircles.length - 1 === menuOptionIndex) {
-                    menuOptionIndex = 0;
-                } else {
-                    menuOptionIndex++;
-                }
-                menuOptionHover(pointerCircles[menuOptionIndex], menuOptionIndex)
-            }, 5500)
-
-            circle.classList.add("active");
-            pointerTexts[index].classList.add("active");
-            switch (index) {
-                case 0:
-                    greenPointer.style.offsetDistance = "62.55%";
-                    break;
-                case 1:
-                    greenPointer.style.offsetDistance = "87.5%";
-                    break;
-                case 2:
-                    greenPointer.style.offsetDistance = "6.5%";
-                    break;
-                case 3:
-                    greenPointer.style.offsetDistance = "24.97%";
-                    break;
-                case 4:
-                    greenPointer.style.offsetDistance = "43.6%";
-                    break;
-                default:
-                    break;
-            }
-
-            pointerCircles.forEach((c, i) => {
-                if (i !== index) {
-                    c.classList.remove("active");
-                    pointerTexts[i].classList.remove("active");
-                }
-            });
+      clearTimeout(menuChangeTimeout);
+      menuChangeTimeout = setTimeout(() => {
+        if (pointerCircles.length - 1 === menuOptionIndex) {
+          menuOptionIndex = 0;
+        } else {
+          menuOptionIndex++;
         }
-    }
-    const menuOptionClickHandler = (index) => {
-        switch (index) {
-            case 0:
-                window.location.href = window.location.href + "about-us";
-                break;
-            case 1:
-                window.location.href = window.location.href + "contact";
-                break;
-            case 2:
-                window.location.href = window.location.href + "courses";
-                break;
-            case 3:
-                window.location.href = window.location.href + "certificates";
-                break;
-            case 4:
-                window.location.href = window.location.href + "articles";
-                break;
-            default:
-                break;
+        menuOptionHover(pointerCircles[menuOptionIndex], menuOptionIndex)
+      }, 5500)
+
+      circle.classList.add("active");
+      pointerTexts[index].classList.add("active");
+      switch (index) {
+        case 0:
+          greenPointer.style.offsetDistance = "62.55%";
+          break;
+        case 1:
+          greenPointer.style.offsetDistance = "87.5%";
+          break;
+        case 2:
+          greenPointer.style.offsetDistance = "6.5%";
+          break;
+        case 3:
+          greenPointer.style.offsetDistance = "24.97%";
+          break;
+        case 4:
+          greenPointer.style.offsetDistance = "43.6%";
+          break;
+        default:
+          break;
+      }
+
+      pointerCircles.forEach((c, i) => {
+        if (i !== index) {
+          c.classList.remove("active");
+          pointerTexts[i].classList.remove("active");
         }
+      });
     }
+  }
+  const menuOptionClickHandler = (index) => {
+    switch (index) {
+      case 0:
+        window.location.href = window.location.href + "about-us";
+        break;
+      case 1:
+        window.location.href = window.location.href + "contact";
+        break;
+      case 2:
+        window.location.href = window.location.href + "courses";
+        break;
+      case 3:
+        window.location.href = window.location.href + "certificates";
+        break;
+      case 4:
+        window.location.href = window.location.href + "articles";
+        break;
+      default:
+        break;
+    }
+  }
 
-    pointerCircles.forEach((circle, index) => {
-        circle.addEventListener("click", () => {
-            menuOptionClickHandler(index)
-        })
-        circle.addEventListener("mouseover", () => {
-            menuOptionHover(circle, index)
-        });
-        circle.addEventListener("touchmove", () => {
-            menuOptionHover(circle, index)
-        });
-    });
-
-    pointerTexts.forEach((text, index) => {
-        text.addEventListener("click", () => {
-            menuOptionClickHandler(index)
-        });
+  pointerCircles.forEach((circle, index) => {
+    circle.addEventListener("click", () => {
+      menuOptionClickHandler(index)
     })
+    circle.addEventListener("mouseover", () => {
+      menuOptionHover(circle, index)
+    });
+    circle.addEventListener("touchmove", () => {
+      menuOptionHover(circle, index)
+    });
+  });
+
+  pointerTexts.forEach((text, index) => {
+    text.addEventListener("click", () => {
+      menuOptionClickHandler(index)
+    });
+  })
 
 
+  networkLines.forEach((nl) => {
+    if (nl.classList.contains("flat")) {
+      nl.classList.add("show");
+    }
+  });
+  document.querySelectorAll(".inner-point").forEach((ip) => {
+    if (ip.classList.contains("flat")) {
+      ip.classList.add("show");
+    }
+  });
+
+
+  setTimeout(() => {
+    menuChangeTimeout = setTimeout(() => {
+      if (pointerCircles.length - 1 === menuOptionIndex) {
+        menuOptionIndex = 0;
+      } else {
+        menuOptionIndex++;
+      }
+      menuOptionHover(pointerCircles[menuOptionIndex], menuOptionIndex)
+    }, 5500)
+    document.querySelector('#diamonds-svg-id[data-v-5b63246b]').classList.add("open");
+    // document.querySelector('.canvas-wrap > img').style.opacity = '1';
+    fullyOpenSvg = true;
+    smallerPoints.forEach((opf) => {
+      opf.classList.add("show");
+    });
     networkLines.forEach((nl) => {
-        if (nl.classList.contains("flat")) {
-            nl.classList.add("show");
-        }
+      if (!nl.classList.contains("flat")) {
+        nl.classList.add("show");
+      } else {
+        nl.classList.remove("show");
+      }
     });
     document.querySelectorAll(".inner-point").forEach((ip) => {
-        if (ip.classList.contains("flat")) {
-            ip.classList.add("show");
-        }
+      if (!ip.classList.contains("flat")) {
+        ip.classList.add("show");
+      } else {
+        ip.classList.remove("show");
+      }
     });
-
-
-    setTimeout(() => {
-        menuChangeTimeout = setTimeout(() => {
-            if (pointerCircles.length - 1 === menuOptionIndex) {
-                menuOptionIndex = 0;
-            } else {
-                menuOptionIndex++;
-            }
-            menuOptionHover(pointerCircles[menuOptionIndex], menuOptionIndex)
-        }, 5500)
-        document.querySelector('#diamonds-svg-id[data-v-5b63246b]').classList.add("open");
-        // document.querySelector('.canvas-wrap > img').style.opacity = '1';
-        fullyOpenSvg = true;
-        smallerPoints.forEach((opf) => {
-            opf.classList.add("show");
-        });
-        networkLines.forEach((nl) => {
-            if (!nl.classList.contains("flat")) {
-                nl.classList.add("show");
-            } else {
-                nl.classList.remove("show");
-            }
-        });
-        document.querySelectorAll(".inner-point").forEach((ip) => {
-            if (!ip.classList.contains("flat")) {
-                ip.classList.add("show");
-            } else {
-                ip.classList.remove("show");
-            }
-        });
-        document.querySelectorAll(".outer-point-stroke").forEach((ops) => {
-            ops.classList.add("show");
-        });
-        pointerTexts.forEach((ops) => {
-            ops.classList.add("show");
-        });
-        document.querySelector(".outer-circle").classList.add("show");
-        greenPointer.classList.add("active");
-        pointerTexts[0].classList.add("active");
-        pointerCircles[0].style.offsetPath =
-            "path('M 893.871 201.454 L 689.667 377.488')";
-        smallerPoints[0].style.offsetPath =
-            "path('M 893.871 201.454 L 689.667 377.488')";
-        pointerCircles[1].style.offsetPath =
-            "path('M 485 201.454 L 689.667 377.488')";
-        smallerPoints[1].style.offsetPath =
-            "path('M 485 201.454 L 689.667 377.488')";
-        pointerCircles[2].style.offsetPath =
-            "path('M 421.871 521.088 L 565.472 472.575')";
-        smallerPoints[2].style.offsetPath =
-            "path('M 421.871 521.088 L 565.472 472.575')";
-        pointerCircles[3].style.offsetPath =
-            "path('M 689.462 698.088 L 813.862 472.575')";
-        smallerPoints[3].style.offsetPath =
-            "path('M 689.462 698.088 L 813.862 472.575')";
-        pointerCircles[4].style.offsetPath =
-            "path('M 957.462 521.088 L 813.862 472.575')";
-        smallerPoints[4].style.offsetPath =
-            "path('M 957.462 521.088 L 813.862 472.575')";
-    }, 3500);
+    document.querySelectorAll(".outer-point-stroke").forEach((ops) => {
+      ops.classList.add("show");
+    });
+    pointerTexts.forEach((ops) => {
+      ops.classList.add("show");
+    });
+    document.querySelector(".outer-circle").classList.add("show");
+    greenPointer.classList.add("active");
+    pointerTexts[0].classList.add("active");
+    pointerCircles[0].style.offsetPath =
+      "path('M 893.871 201.454 L 689.667 377.488')";
+    smallerPoints[0].style.offsetPath =
+      "path('M 893.871 201.454 L 689.667 377.488')";
+    pointerCircles[1].style.offsetPath =
+      "path('M 485 201.454 L 689.667 377.488')";
+    smallerPoints[1].style.offsetPath =
+      "path('M 485 201.454 L 689.667 377.488')";
+    pointerCircles[2].style.offsetPath =
+      "path('M 421.871 521.088 L 565.472 472.575')";
+    smallerPoints[2].style.offsetPath =
+      "path('M 421.871 521.088 L 565.472 472.575')";
+    pointerCircles[3].style.offsetPath =
+      "path('M 689.462 698.088 L 813.862 472.575')";
+    smallerPoints[3].style.offsetPath =
+      "path('M 689.462 698.088 L 813.862 472.575')";
+    pointerCircles[4].style.offsetPath =
+      "path('M 957.462 521.088 L 813.862 472.575')";
+    smallerPoints[4].style.offsetPath =
+      "path('M 957.462 521.088 L 813.862 472.575')";
+  }, 3500);
 });
