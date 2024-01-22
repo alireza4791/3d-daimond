@@ -46,6 +46,7 @@ body {
   z-index: 15;
   transition: all 0.3s ease-in-out;
 }
+
 #diamonds-svg-id[data-v-5b63246b].open {
   width: 86%;
   height: 100vh;
@@ -53,28 +54,28 @@ body {
 #diamonds-svg-id .network-line.show[data-v-5b63246b] {
   opacity: 0.5;
   stroke-dashoffset: 0;
-  transition: all 3.5s;
-  -webkit-transition: all 3.5s;
+  transition: all 5.5s;
+  -webkit-transition: all 5.5s;
 }
 #diamonds-svg-id .network-line[data-v-5b63246b] {
   fill: none;
   stroke: hsla(0, 0%, 72.9%, 0.8);
   stroke-width: 1.5px;
-  transition: all 3.5s;
-  -webkit-transition: all 3.5s;
+  transition: all 5.5s;
+  -webkit-transition: all 5.5s;
   stroke-dasharray: 2000 2000;
   stroke-dashoffset: 2000;
 }
 #diamonds-svg-id .inner-point[data-v-5b63246b] {
   fill: hsla(0, 0%, 45.5%, 0.78);
   opacity: 0;
-  transition: all 3.5s;
-  -webkit-transition: all 3.5s;
+  transition: all 5.5s;
+  -webkit-transition: all 5.5s;
 }
 #diamonds-svg-id .inner-point.show[data-v-5b63246b] {
   opacity: 0.5;
-  transition: all 3.5s;
-  -webkit-transition: all 3.5s;
+  transition: all 5.5s;
+  -webkit-transition: all 5.5s;
 }
 #diamonds-svg-id .movie-pointer.active[data-v-5b63246b] {
   opacity: 1;
@@ -94,8 +95,8 @@ body {
   stroke: #cfb00e;
   stroke-dasharray: 5000 5000;
   stroke-dashoffset: 5000;
-  transition: all 3.5s;
-  -webkit-transition: all 3.5s;
+  transition: all 5.5s;
+  -webkit-transition: all 5.5s;
 }
 #diamonds-svg-id .outer-point-stroke.active[data-v-5b63246b] {
   opacity: 1;
@@ -109,11 +110,13 @@ body {
   cursor: pointer;
   opacity: 0.8;
   z-index: 300;
+}
+#diamonds-svg-id .outer-point-stroke[data-v-5b63246b].svg-animation {
   animation-name: dash-line-move-data-v-5b63246b;
-  animation-duration: 5s;
+  animation-duration: 5.5s;
   animation-iteration-count: infinite;
   -webkit-animation-name: dash-line-move-data-v-5b63246b;
-  -webkit-animation-duration: 5s;
+  -webkit-animation-duration: 5.5s;
   -webkit-animation-iteration-count: infinite;
 }
 #diamonds-svg-id .outer-point-fill.second-point[data-v-5b63246b] {
@@ -183,14 +186,59 @@ body {
   left: 0;
   top: 0;
 }
-.canvas-wrap > img {
+/* .canvas-wrap > img {
   width: 3vw;
   height: 3vw;
   z-index: 20;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
-}
+} */
 
+@media all and (min-width: 991px) {
+  #diamonds-svg-id[data-v-5b63246b] {
+    width: 1000px;
+    height: 490px;
+    min-height: auto;
+  }
+  #diamonds-svg-id[data-v-5b63246b].open {
+    width: 950px;
+    height: 580px;
+    min-height: auto;
+  }
+}
+@media all and (min-width: 1280px) {
+  #diamonds-svg-id[data-v-5b63246b] {
+    width: 1200px;
+    height: 640px;
+    /* min-height: auto; */
+  }
+  #diamonds-svg-id[data-v-5b63246b].open {
+    width: 1150px;
+    height: 710px;
+    /* transform: translateY(5px); */
+    /* min-height: auto; */
+  }
+}
+@media all and (min-width: 1440px) {
+  #diamonds-svg-id[data-v-5b63246b] {
+    width: 1500px;
+    height: 800px;
+  }
+  #diamonds-svg-id[data-v-5b63246b].open {
+    width: 1500px;
+    height: 870px;
+  }
+}
+@media all and (min-width: 1920px) {
+  #diamonds-svg-id[data-v-5b63246b] {
+    width: 1950px;
+    height: 1100px;
+  }
+  #diamonds-svg-id[data-v-5b63246b].open {
+    width: 1950px;
+    height: 1170px;
+  }
+}
 
 @media all and (max-width: 991px) {
   #diamonds-svg-id[data-v-5b63246b] {
@@ -207,16 +255,16 @@ body {
     width: 100vw;
     overflow: hidden;
   }
-  .canvas-wrap > img {
+  /* .canvas-wrap > img {
     width: 7vw;
     height: 7vw;
-  }
+  } */
 }
 @media all and (max-width: 767px) {
-  .canvas-wrap > img {
+  /* .canvas-wrap > img {
     width: 8vw;
     height: 8vw;
-  }
+  } */
   #diamonds-svg-id[data-v-5b63246b] {
     width: 150vw;
     min-width: 150vw;
