@@ -612,6 +612,8 @@ let mixer = null
 let daimondObj;
 
 const objLoader = new OBJLoader()
+var browserName = navigator.appName;
+var nAgt = navigator.userAgent;
 
 objLoader.load('https://alireza4791.github.io/3d-daimond/dist/models/daimond/Diamond.obj', object => {
     daimondObj = object;
@@ -627,10 +629,24 @@ objLoader.load('https://alireza4791.github.io/3d-daimond/dist/models/daimond/Dia
         daimondObj.scale.z = 0.83;
         daimondObj.position.y = 0.9;
     } else if (parseInt(window.getComputedStyle(document.querySelector('.canvas-wrap')).getPropertyValue("width")) <= 479) {
-        daimondObj.scale.x = 0.45;
-        daimondObj.scale.y = 0.45;
-        daimondObj.scale.z = 0.45;
-        daimondObj.position.y = 0.93;
+        if ((verOffset = nAgt.indexOf("Safari")) != -1) {
+            browserName = "Safari";
+            fullVersion = nAgt.substring(verOffset + 7);
+            if ((verOffset = nAgt.indexOf("Version")) != -1)
+                fullVersion = nAgt.substring(verOffset + 8);
+        }
+        if (browserName === "Safari") {
+            daimondObj.scale.x = 0.62;
+            daimondObj.scale.y = 0.62;
+            daimondObj.scale.z = 0.62;
+            daimondObj.position.y = 1;
+        } else {
+            daimondObj.scale.x = 0.45;
+            daimondObj.scale.y = 0.45;
+            daimondObj.scale.z = 0.45;
+            daimondObj.position.y = 0.93;
+        }
+
     }
     else {
         daimondObj.scale.x = 0.9;
