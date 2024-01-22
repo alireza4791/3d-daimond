@@ -243,13 +243,14 @@ body {
 @media all and (max-width: 991px) {
   #diamonds-svg-id[data-v-5b63246b] {
     transform: translateY(30px);
-    width: 125vw;
-    min-width: 125vw;
-    left: -12.5%;
+    width: 1080px;
+    min-width: 1080px;
+    /* left: -12.5%; */
   }
   #diamonds-svg-id[data-v-5b63246b].open {
-    width: 125vw;
-    min-width: 125vw;
+    width: 1050px;
+    min-width: 1050px;
+    transform: translateY(24px);
   }
   .svg-wrap {
     width: 100vw;
@@ -266,26 +267,30 @@ body {
     height: 8vw;
   } */
   #diamonds-svg-id[data-v-5b63246b] {
-    width: 150vw;
-    min-width: 150vw;
-    left: -25%;
+    /* left: -25%; */
+    width: 1060px;
+    min-width: 1060px;
     transform: translateY(30px);
   }
   #diamonds-svg-id[data-v-5b63246b].open {
-    width: 150vw;
-    min-width: 150vw;
+    width: 990px;
+    min-width: 990px;
   }
 }
 @media all and (max-width: 478px) {
   #diamonds-svg-id[data-v-5b63246b] {
-    width: 200vw;
-    left: -100%;
-    min-width: 200vw;
+    width: 670px;
+    /* left: -100%; */
+    height: 400px;
+    min-height: auto;
+    min-width: 670px;
+    transform: translateY(20px);
   }
   #diamonds-svg-id[data-v-5b63246b].open {
-    height: 80vh;
-    width: 200vw;
-    min-width: 200vw;
+    height: 400px;
+    width: 670px;
+    min-width: 670px;
     min-height: auto;
+    transform: translateY(20px);
   }
 }
