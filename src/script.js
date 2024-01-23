@@ -621,17 +621,17 @@ objLoader.load('https://alireza4791.github.io/3d-daimond/dist/models/daimond/Dia
   daimondObj = object;
   // daimondObj.position.y = 1.01;
   daimondObj.position.y = 0.65;
-  if (parseInt(window.getComputedStyle(document.querySelector('.canvas-wrap')).getPropertyValue("width")) <= 991 && parseInt(window.getComputedStyle(document.querySelector('.canvas-wrap')).getPropertyValue("width")) > 768) {
+  if (window.innerWidth <= 991 && window.innerWidth > 768) {
     daimondObj.scale.x = 0.85;
     daimondObj.scale.y = 0.85;
     daimondObj.scale.z = 0.85;
-    daimondObj.position.y = 0.9;
-  } else if (parseInt(window.getComputedStyle(document.querySelector('.canvas-wrap')).getPropertyValue("width")) <= 768 && parseInt(window.getComputedStyle(document.querySelector('.canvas-wrap')).getPropertyValue("width")) > 479) {
-    daimondObj.scale.x = 0.83;
-    daimondObj.scale.y = 0.83;
-    daimondObj.scale.z = 0.83;
-    daimondObj.position.y = 0.9;
-  } else if (parseInt(window.getComputedStyle(document.querySelector('.canvas-wrap')).getPropertyValue("width")) <= 479) {
+    daimondObj.position.y = 0.65;
+  } else if (window.innerWidth <= 768 && window.innerWidth > 479) {
+    daimondObj.scale.x = 0.80;
+    daimondObj.scale.y = 0.80;
+    daimondObj.scale.z = 0.80;
+    daimondObj.position.y = 0.65;
+  } else if (window.innerWidth <= 479) {
     if ((verOffset = nAgt.indexOf("Safari")) != -1) {
       browserName = "Safari";
       fullVersion = nAgt.substring(verOffset + 7);
@@ -639,15 +639,15 @@ objLoader.load('https://alireza4791.github.io/3d-daimond/dist/models/daimond/Dia
         fullVersion = nAgt.substring(verOffset + 8);
     }
     if (browserName === "Safari") {
-      daimondObj.scale.x = 0.565;
-      daimondObj.scale.y = 0.565;
-      daimondObj.scale.z = 0.565;
-      daimondObj.position.y = 1.08;
+      daimondObj.scale.x = 0.495;
+      daimondObj.scale.y = 0.495;
+      daimondObj.scale.z = 0.495;
+      daimondObj.position.y = 0.62;
     } else {
-      daimondObj.scale.x = 0.58;
-      daimondObj.scale.y = 0.58;
-      daimondObj.scale.z = 0.58;
-      daimondObj.position.y = 1.08;
+      daimondObj.scale.x = 0.51;
+      daimondObj.scale.y = 0.51;
+      daimondObj.scale.z = 0.51;
+      daimondObj.position.y = 0.62;
     }
 
   }
@@ -662,13 +662,13 @@ objLoader.load('https://alireza4791.github.io/3d-daimond/dist/models/daimond/Dia
       daimondObj.scale.x = 0.87;
       daimondObj.scale.y = 0.87;
       daimondObj.scale.z = 0.87;
-    } 
+    }
     if (window.innerWidth >= 1440 && window.innerWidth < 1920) {
       daimondObj.scale.x = 0.87;
       daimondObj.scale.y = 0.87;
       daimondObj.scale.z = 0.87;
       daimondObj.position.y = 0.72;
-    } 
+    }
     // else {
     //   daimondObj.scale.x = 0.9;
     //   daimondObj.scale.y = 0.9;
@@ -687,13 +687,7 @@ objLoader.load('https://alireza4791.github.io/3d-daimond/dist/models/daimond/Dia
 
 
 let rotateDaimond = false;
-setTimeout(() => {
-  rotateDaimond = true;
-}, 3500)
 
-setTimeout(() => {
-  rotateDaimond = false;
-}, 5650)
 
 
 /**
@@ -967,6 +961,7 @@ window.addEventListener("load", () => {
 
 
   setTimeout(() => {
+    rotateDaimond = true;
     menuChangeTimeout = setTimeout(() => {
       if (pointerCircles.length - 1 === menuOptionIndex) {
         menuOptionIndex = 0;
@@ -1025,4 +1020,8 @@ window.addEventListener("load", () => {
     smallerPoints[4].style.offsetPath =
       "path('M 957.462 521.088 L 813.862 472.575')";
   }, 3500);
+
+  setTimeout(() => {
+    rotateDaimond = false;
+  }, 5650)
 });
