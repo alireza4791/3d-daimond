@@ -309,6 +309,23 @@ body {
     min-width: 990px;
   } */
 }
+
+@media all and (max-width: 567px) {
+  .svg-wrap {
+    height: 100dvh;
+  }
+  #diamonds-svg-id[data-v-5b63246b] {
+    width: 180vw;
+    min-width: 180vw;
+    height: 80%;
+    min-height: auto;
+  }
+  #diamonds-svg-id[data-v-5b63246b].open {
+    width: 180vw;
+    height: 80%;
+    min-height: auto;
+  }
+}
 @media all and (max-width: 478px) {
   /* #diamonds-svg-id[data-v-5b63246b] {
     width: 670px;

@@ -627,9 +627,15 @@ objLoader.load('https://alireza4791.github.io/3d-daimond/dist/models/daimond/Dia
     daimondObj.scale.z = 0.85;
     daimondObj.position.y = 0.65;
   } else if (window.innerWidth <= 768 && window.innerWidth > 479) {
-    daimondObj.scale.x = 0.80;
-    daimondObj.scale.y = 0.80;
-    daimondObj.scale.z = 0.80;
+    if (window.innerWidth <= 567) {
+      daimondObj.scale.x = 0.71;
+      daimondObj.scale.y = 0.71;
+      daimondObj.scale.z = 0.71;
+    } else {
+      daimondObj.scale.x = 0.80;
+      daimondObj.scale.y = 0.80;
+      daimondObj.scale.z = 0.80;
+    }
     daimondObj.position.y = 0.65;
   } else if (window.innerWidth <= 479) {
     if ((verOffset = nAgt.indexOf("Safari")) != -1) {
