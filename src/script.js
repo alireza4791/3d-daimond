@@ -619,7 +619,8 @@ var fullVersion = '' + parseFloat(navigator.appVersion);
 
 objLoader.load('https://alireza4791.github.io/3d-daimond/dist/models/daimond/Diamond.obj', object => {
   daimondObj = object;
-  daimondObj.position.y = 1.01;
+  // daimondObj.position.y = 1.01;
+  daimondObj.position.y = 0.65;
   if (parseInt(window.getComputedStyle(document.querySelector('.canvas-wrap')).getPropertyValue("width")) <= 991 && parseInt(window.getComputedStyle(document.querySelector('.canvas-wrap')).getPropertyValue("width")) > 768) {
     daimondObj.scale.x = 0.85;
     daimondObj.scale.y = 0.85;
@@ -651,25 +652,39 @@ objLoader.load('https://alireza4791.github.io/3d-daimond/dist/models/daimond/Dia
 
   }
   else {
-    daimondObj.scale.x = 0.9;
-    daimondObj.scale.y = 0.9;
-    daimondObj.scale.z = 0.9;
+    if (window.innerWidth >= 991 && window.innerWidth < 1280) {
+      daimondObj.scale.x = 0.85;
+      daimondObj.scale.y = 0.85;
+      daimondObj.scale.z = 0.85;
+      daimondObj.position.y = 0.77;
+    }
+    if (window.innerWidth >= 1280 && window.innerWidth < 1440) {
+      daimondObj.scale.x = 0.87;
+      daimondObj.scale.y = 0.87;
+      daimondObj.scale.z = 0.87;
+    } 
+    if (window.innerWidth >= 1440 && window.innerWidth < 1920) {
+      daimondObj.scale.x = 0.87;
+      daimondObj.scale.y = 0.87;
+      daimondObj.scale.z = 0.87;
+      daimondObj.position.y = 0.72;
+    } 
+    // else {
+    //   daimondObj.scale.x = 0.9;
+    //   daimondObj.scale.y = 0.9;
+    //   daimondObj.scale.z = 0.9;
+    // }
+
   }
 
-  daimondObj.rotation.x = 0.21;
+  daimondObj.rotation.x = 0.11;
   daimondObj.children[0].material = new THREE.MeshPhongMaterial({
     color: '#3c2660',
     shininess: 50,
-    // clearcoat: 1,
-    // sheenRoughness: 1,
-    // roughness: 1,
-    // metalness: 0.1,
-    // ior: 2.333,
-    // reflectivity: 1,
-    // iridescence: 1.3,
   })
   scene.add(daimondObj)
 })
+
 
 let rotateDaimond = false;
 setTimeout(() => {
