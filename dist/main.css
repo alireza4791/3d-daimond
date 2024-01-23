@@ -193,7 +193,9 @@ body {
   /* left: 0;
   top: 0; */
   /* visibility: hidden; */
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 99vh;
   margin-top: -77px;
