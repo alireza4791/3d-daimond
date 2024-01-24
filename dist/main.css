@@ -344,12 +344,12 @@ body {
   #diamonds-svg-id[data-v-5b63246b] {
     width: 190vw;
     min-width: 190vw;
-    height: 70%;
+    height: 65%;
     min-height: auto;
   }
   #diamonds-svg-id[data-v-5b63246b].open {
     width: 190vw;
-    height: 70%;
+    height: 65%;
     min-height: auto;
   }
 }
