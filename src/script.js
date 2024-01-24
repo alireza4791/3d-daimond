@@ -659,26 +659,26 @@ objLoader.load('https://alireza4791.github.io/3d-daimond/dist/models/daimond/Dia
   }
   else {
     if (window.innerWidth >= 991 && window.innerWidth < 1280) {
-      daimondObj.scale.x = 0.81;
-      daimondObj.scale.y = 0.81;
-      daimondObj.scale.z = 0.81;
+      daimondObj.scale.x = 0.815;
+      daimondObj.scale.y = 0.815;
+      daimondObj.scale.z = 0.815;
       daimondObj.position.y = 0.79;
     }
     if (window.innerWidth >= 1280 && window.innerWidth < 1440) {
-      daimondObj.scale.x = 0.825;
-      daimondObj.scale.y = 0.825;
-      daimondObj.scale.z = 0.825;
+      daimondObj.scale.x = 0.828;
+      daimondObj.scale.y = 0.828;
+      daimondObj.scale.z = 0.828;
     }
     if (window.innerWidth >= 1440 && window.innerWidth < 1920) {
-      daimondObj.scale.x = 0.825;
-      daimondObj.scale.y = 0.825;
-      daimondObj.scale.z = 0.825;
+      daimondObj.scale.x = 0.835;
+      daimondObj.scale.y = 0.835;
+      daimondObj.scale.z = 0.835;
       daimondObj.position.y = 0.725;
     } else if (window.innerWidth > 1920) {
-      daimondObj.scale.x = 0.77;
-      daimondObj.scale.y = 0.77;
-      daimondObj.scale.z = 0.77;
-      daimondObj.position.y = 0.745;
+      daimondObj.scale.x = 0.82;
+      daimondObj.scale.y = 0.82;
+      daimondObj.scale.z = 0.82;
+      daimondObj.position.y = 0.765;
     }
     // else {
     //   daimondObj.scale.x = 0.9;
