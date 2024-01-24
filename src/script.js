@@ -674,7 +674,7 @@ objLoader.load('https://alireza4791.github.io/3d-daimond/dist/models/daimond/Dia
         daimondObj.scale.x = 0.84;
         daimondObj.scale.y = 0.84;
         daimondObj.scale.z = 0.84;
-        daimondObj.position.y = 0.738;
+        daimondObj.position.y = 0.735;
       } else if(window.innerWidth >= 1600) {
         daimondObj.scale.x = 0.84;
         daimondObj.scale.y = 0.84;
