@@ -665,9 +665,10 @@ objLoader.load('https://alireza4791.github.io/3d-daimond/dist/models/daimond/Dia
       daimondObj.position.y = 0.77;
     }
     if (window.innerWidth >= 1280 && window.innerWidth < 1440) {
-      daimondObj.scale.x = 0.87;
-      daimondObj.scale.y = 0.87;
-      daimondObj.scale.z = 0.87;
+      daimondObj.scale.x = 0.77;
+      daimondObj.scale.y = 0.77;
+      daimondObj.scale.z = 0.77;
+      daimondObj.position.y = 0.85;
     }
     if (window.innerWidth >= 1440 && window.innerWidth < 1920) {
       daimondObj.scale.x = 0.8;
