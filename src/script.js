@@ -648,12 +648,12 @@ objLoader.load('https://alireza4791.github.io/3d-daimond/dist/models/daimond/Dia
       daimondObj.scale.x = 0.495;
       daimondObj.scale.y = 0.495;
       daimondObj.scale.z = 0.495;
-      daimondObj.position.y = 0.62;
+      daimondObj.position.y = 0.81;
     } else {
       daimondObj.scale.x = 0.51;
       daimondObj.scale.y = 0.51;
       daimondObj.scale.z = 0.51;
-      daimondObj.position.y = 0.62;
+      daimondObj.position.y = 0.81;
     }
 
   }
@@ -699,63 +699,63 @@ let rotateDaimond = false;
 /**
  * Lights
  */
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.8)
+const ambientLight = new THREE.AmbientLight(0xffffff, 1)
 scene.add(ambientLight)
 
-const firstPointLight = new THREE.PointLight(0xffffff, 1.5)
-firstPointLight.castShadow = true
-firstPointLight.shadow.mapSize.set(1024, 1024)
-firstPointLight.shadow.camera.far = 15
-firstPointLight.shadow.camera.left = - 7
-firstPointLight.shadow.camera.top = 7
-firstPointLight.shadow.camera.right = 7
-firstPointLight.shadow.camera.bottom = - 7
-firstPointLight.position.set(0, -3, 1)
-scene.add(firstPointLight)
+// const firstPointLight = new THREE.PointLight(0xffffff, 1.5)
+// firstPointLight.castShadow = true
+// firstPointLight.shadow.mapSize.set(1024, 1024)
+// firstPointLight.shadow.camera.far = 15
+// firstPointLight.shadow.camera.left = - 7
+// firstPointLight.shadow.camera.top = 7
+// firstPointLight.shadow.camera.right = 7
+// firstPointLight.shadow.camera.bottom = - 7
+// firstPointLight.position.set(0, -3, 1)
+// scene.add(firstPointLight)
 
-const secondPointLight = new THREE.PointLight(0xffffff, 1.5)
-secondPointLight.castShadow = true
-secondPointLight.shadow.mapSize.set(1024, 1024)
-secondPointLight.shadow.camera.far = 15
-secondPointLight.shadow.camera.left = - 7
-secondPointLight.shadow.camera.top = 7
-secondPointLight.shadow.camera.right = 7
-secondPointLight.shadow.camera.bottom = - 7
-secondPointLight.position.set(3.5, 3.5, 1)
-scene.add(secondPointLight)
+// const secondPointLight = new THREE.PointLight(0xffffff, 1.5)
+// secondPointLight.castShadow = true
+// secondPointLight.shadow.mapSize.set(1024, 1024)
+// secondPointLight.shadow.camera.far = 15
+// secondPointLight.shadow.camera.left = - 7
+// secondPointLight.shadow.camera.top = 7
+// secondPointLight.shadow.camera.right = 7
+// secondPointLight.shadow.camera.bottom = - 7
+// secondPointLight.position.set(3.5, 3.5, 1)
+// scene.add(secondPointLight)
 
-const thirdPointLight = new THREE.PointLight(0xffffff, 1.5)
-thirdPointLight.castShadow = true
-thirdPointLight.shadow.mapSize.set(1024, 1024)
-thirdPointLight.shadow.camera.far = 15
-thirdPointLight.shadow.camera.left = - 7
-thirdPointLight.shadow.camera.top = 7
-thirdPointLight.shadow.camera.right = 7
-thirdPointLight.shadow.camera.bottom = - 7
-thirdPointLight.position.set(-3.5, 3.5, 1)
-scene.add(thirdPointLight)
+// const thirdPointLight = new THREE.PointLight(0xffffff, 1.5)
+// thirdPointLight.castShadow = true
+// thirdPointLight.shadow.mapSize.set(1024, 1024)
+// thirdPointLight.shadow.camera.far = 15
+// thirdPointLight.shadow.camera.left = - 7
+// thirdPointLight.shadow.camera.top = 7
+// thirdPointLight.shadow.camera.right = 7
+// thirdPointLight.shadow.camera.bottom = - 7
+// thirdPointLight.position.set(-3.5, 3.5, 1)
+// scene.add(thirdPointLight)
 
-const fourthPointLight = new THREE.PointLight(0xffffff, 1.5)
-fourthPointLight.castShadow = true
-fourthPointLight.shadow.mapSize.set(1024, 1024)
-fourthPointLight.shadow.camera.far = 15
-fourthPointLight.shadow.camera.left = - 7
-fourthPointLight.shadow.camera.top = 7
-fourthPointLight.shadow.camera.right = 7
-fourthPointLight.shadow.camera.bottom = - 7
-fourthPointLight.position.set(3.5, 0, 1)
-scene.add(fourthPointLight)
+// const fourthPointLight = new THREE.PointLight(0xffffff, 1.5)
+// fourthPointLight.castShadow = true
+// fourthPointLight.shadow.mapSize.set(1024, 1024)
+// fourthPointLight.shadow.camera.far = 15
+// fourthPointLight.shadow.camera.left = - 7
+// fourthPointLight.shadow.camera.top = 7
+// fourthPointLight.shadow.camera.right = 7
+// fourthPointLight.shadow.camera.bottom = - 7
+// fourthPointLight.position.set(3.5, 0, 1)
+// scene.add(fourthPointLight)
 
-const fithPointLight = new THREE.PointLight(0xffffff, 1.5)
-fithPointLight.castShadow = true
-fithPointLight.shadow.mapSize.set(1024, 1024)
-fithPointLight.shadow.camera.far = 15
-fithPointLight.shadow.camera.left = - 7
-fithPointLight.shadow.camera.top = 7
-fithPointLight.shadow.camera.right = 7
-fithPointLight.shadow.camera.bottom = - 7
-fithPointLight.position.set(-3.5, 0, 1)
-scene.add(fithPointLight)
+// const fithPointLight = new THREE.PointLight(0xffffff, 1.5)
+// fithPointLight.castShadow = true
+// fithPointLight.shadow.mapSize.set(1024, 1024)
+// fithPointLight.shadow.camera.far = 15
+// fithPointLight.shadow.camera.left = - 7
+// fithPointLight.shadow.camera.top = 7
+// fithPointLight.shadow.camera.right = 7
+// fithPointLight.shadow.camera.bottom = - 7
+// fithPointLight.position.set(-3.5, 0, 1)
+// scene.add(fithPointLight)
 
 const centerLight = new THREE.DirectionalLight(0xffffff, 1)
 centerLight.castShadow = true
