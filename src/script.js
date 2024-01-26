@@ -629,30 +629,72 @@ var fullVersion = '' + parseFloat(navigator.appVersion);
 
 objLoader.load('https://alireza4791.github.io/3d-daimond/dist/models/daimond/Diamond.obj', object => {
   daimondObj = object;
-  daimondObj.scale.x = 0.94;
-  daimondObj.scale.y = 0.94;
-  daimondObj.scale.z = 0.94;
-  if(window.innerWidth <= 400) {
-    daimondObj.scale.x = 0.56;
-    daimondObj.scale.y = 0.56;
-    daimondObj.scale.z = 0.56;
-  } else if(window.innerWidth > 400 && window.innerWidth <= 500) {
-    daimondObj.scale.x = 0.57;
-    daimondObj.scale.y = 0.57;
-    daimondObj.scale.z = 0.57;
-  } else if(window.innerWidth > 500 && window.innerWidth <= 600) {
-    daimondObj.scale.x = 0.6;
-    daimondObj.scale.y = 0.6;
-    daimondObj.scale.z = 0.6;
-  } else if(window.innerWidth > 600 && window.innerWidth <= 700) {
-    daimondObj.scale.x = 0.54;
-    daimondObj.scale.y = 0.54;
-    daimondObj.scale.z = 0.54;
-  }
-  else if(window.innerWidth > 700 && window.innerWidth <= 991) {
-    daimondObj.scale.x = 0.57;
-    daimondObj.scale.y = 0.57;
-    daimondObj.scale.z = 0.57;
+
+  // if(window.innerWidth <= 400) {
+  //   daimondObj.scale.x = 0.56;
+  //   daimondObj.scale.y = 0.56;
+  //   daimondObj.scale.z = 0.56;
+  // } else if(window.innerWidth > 400 && window.innerWidth <= 500) {
+  //   daimondObj.scale.x = 0.57;
+  //   daimondObj.scale.y = 0.57;
+  //   daimondObj.scale.z = 0.57;
+  // } else if(window.innerWidth > 500 && window.innerWidth <= 600) {
+  //   daimondObj.scale.x = 0.6;
+  //   daimondObj.scale.y = 0.6;
+  //   daimondObj.scale.z = 0.6;
+  // } else if(window.innerWidth > 600 && window.innerWidth <= 700) {
+  //   daimondObj.scale.x = 0.54;
+  //   daimondObj.scale.y = 0.54;
+  //   daimondObj.scale.z = 0.54;
+  // }
+  // else if(window.innerWidth > 700 && window.innerWidth <= 991) {
+  //   daimondObj.scale.x = 0.57;
+  //   daimondObj.scale.y = 0.57;
+  //   daimondObj.scale.z = 0.57;
+  // }
+  if (window.innerWidth <= 991) {
+    // daimondObj.position.y = 0.65;
+
+    if (window.innerWidth <= 991 && window.innerWidth > 768) {
+      daimondObj.scale.x = 0.85;
+      daimondObj.scale.y = 0.85;
+      daimondObj.scale.z = 0.85;
+      // daimondObj.position.y = 0.65;
+    } else if (window.innerWidth <= 768 && window.innerWidth > 479) {
+      if (window.innerWidth <= 567) {
+        daimondObj.scale.x = 0.71;
+        daimondObj.scale.y = 0.71;
+        daimondObj.scale.z = 0.71;
+      } else {
+        daimondObj.scale.x = 0.80;
+        daimondObj.scale.y = 0.80;
+        daimondObj.scale.z = 0.80;
+      }
+      // daimondObj.position.y = 0.65;
+    } else if (window.innerWidth <= 479) {
+      if ((verOffset = nAgt.indexOf("Safari")) != -1) {
+        browserName = "Safari";
+        fullVersion = nAgt.substring(verOffset + 7);
+        if ((verOffset = nAgt.indexOf("Version")) != -1)
+          fullVersion = nAgt.substring(verOffset + 8);
+      }
+      if (browserName === "Safari") {
+        daimondObj.scale.x = 0.494;
+        daimondObj.scale.y = 0.494;
+        daimondObj.scale.z = 0.494;
+        // daimondObj.position.y = 0.83;
+      } else {
+        daimondObj.scale.x = 0.57;
+        daimondObj.scale.y = 0.57;
+        daimondObj.scale.z = 0.57;
+        // daimondObj.position.y = 0.81;
+      }
+
+    }
+  } else {
+    daimondObj.scale.x = 0.94;
+    daimondObj.scale.y = 0.94;
+    daimondObj.scale.z = 0.94;
   }
 
   daimondObj.rotation.x = 0.12;
@@ -1005,7 +1047,7 @@ window.addEventListener("load", () => {
       "path('M 1138 932 L 565.472 472.575')";
     smallerPoints[3].style.offsetPath =
       "path('M 1138 932 L 565.472 472.575')";
-      pointerCircles[4].style.offsetPath =
+    pointerCircles[4].style.offsetPath =
       "path('M 1492.402 696 L 813.862 472.575')";
     smallerPoints[4].style.offsetPath =
       "path('M 1492.402 696 L 813.862 472.575')";
