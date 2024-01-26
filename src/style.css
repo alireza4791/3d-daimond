@@ -203,7 +203,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center; */
-  position: relative;
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
   min-height: 99.75vh;
   height: auto;
@@ -213,6 +215,8 @@ body {
   position: absolute;
   width: 100vw;
   height: 99vh;
+  left: 0;
+  top: 0;
   /* margin-top: -77px; */
   min-height: 600px;
   pointer-events: none;
