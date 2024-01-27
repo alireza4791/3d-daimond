@@ -33,7 +33,7 @@ body {
     fill: transparent;
   }
   99.99% {
-    stroke-dasharray: 100 100;
+    stroke-dasharray: 10 10;
     stroke-dashoffset: 100;
     stroke-width: 3px;
     fill: hsla(0, 0%, 100%, 0.25);
@@ -41,28 +41,13 @@ body {
 }
 
 #diamonds-svg-id[data-v-5b63246b] {
-  /* position: absolute;
-  left: 0;
-  top: 0;
   width: 100%;
   height: 99vh;
   min-height: 600px;
-  z-index: 15; */
-
-      /* position: absolute;
-    left: 0;
-    top: 0; */
-    width: 100%;
-    height: 99vh;
-    min-height: 600px;
-    z-index: 15;
-    transition: all 0.3s ease-in-out;
+  z-index: 15;
+  transition: all 0.3s ease-in-out;
 }
 
-/* #diamonds-svg-id[data-v-5b63246b].open {
-  width: 100%;
-  height: 99vh;
-} */
 #diamonds-svg-id .network-line.show[data-v-5b63246b] {
   opacity: 0.5;
   stroke-dashoffset: 0;
@@ -203,14 +188,6 @@ body {
   clip-path: inset(0 0 0 0);
 }
 .svg-wrap {
-  /* position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  min-height: 99.75vh;
-  height: auto; */
-
-
   position: absolute;
   left: 0;
   top: 0;
@@ -219,96 +196,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 .canvas-wrap {
-  /* position: absolute;
-  width: 100vw;
-  height: 99vh;
-  left: 0;
-  top: 0;
-  min-height: 600px;
-  pointer-events: none; */
-
   position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
   height: 99vh;
-  /* margin-top: -77px; */
   min-height: 600px;
   pointer-events: none;
 }
 
-@media all and (min-width: 991px) {
-  /* #diamonds-svg-id[data-v-5b63246b] {
-    width: 88%;
-    height: 100%;
-  }
-  #diamonds-svg-id[data-v-5b63246b].open {
-    width: 88%;
-    height: 100%;
-  } */
-}
-@media all and (min-width: 1280px) {
-  /* #diamonds-svg-id[data-v-5b63246b] {
-    width: 85%;
-    height: 100%;
-  }
-  #diamonds-svg-id[data-v-5b63246b].open {
-    width: 82%;
-    height: 100%;
-  } */
-}
-@media all and (min-width: 1440px) {
-  /* #diamonds-svg-id[data-v-5b63246b] {
-    width: 1500px;
-    height: 800px;
-  }
-  #diamonds-svg-id[data-v-5b63246b].open {
-    width: 1500px;
-    height: 870px;
-  } */
-  /* #diamonds-svg-id[data-v-5b63246b] {
-    width: 85%;
-    height: 100%;
-  }
-  #diamonds-svg-id[data-v-5b63246b].open {
-    width: 82%;
-    height: 100%;
-  } */
-}
-/* @media all and (min-width: 1920px) {
-  #diamonds-svg-id[data-v-5b63246b] {
-    width: 1950px;
-    height: 1100px;
-  }
-  #diamonds-svg-id[data-v-5b63246b].open {
-    width: 1950px;
-    height: 1170px;
-  }
-} */
-
 @media all and (max-width: 991px) {
-  /* #diamonds-svg-id[data-v-5b63246b] {
-    transform: translateY(30px);
-    width: 1080px;
-    min-width: 1080px;
-  }
-  #diamonds-svg-id[data-v-5b63246b].open {
-    width: 1050px;
-    min-width: 1050px;
-    transform: translateY(24px);
-  } */
-  /* #diamonds-svg-id[data-v-5b63246b] {
-    width: 125vw;
-    min-width: 125vw;
-    height: 100%;
-  }
-  #diamonds-svg-id[data-v-5b63246b].open {
-    width: 125vw;
-    height: 100%;
-  } */
   .svg-wrap {
     width: 100vw;
     overflow: hidden;
@@ -318,91 +217,26 @@ body {
   .svg-wrap {
     height: 100dvh;
   }
-  /* #diamonds-svg-id[data-v-5b63246b] {
-    width: 160vw;
-    min-width: 160vw;
-    height: 100%;
-  }
-  #diamonds-svg-id[data-v-5b63246b].open {
-    width: 160vw;
-    height: 100%;
-  } */
-  /* #diamonds-svg-id[data-v-5b63246b] {
-    width: 1060px;
-    min-width: 1060px;
-    transform: translateY(30px);
-  }
-  #diamonds-svg-id[data-v-5b63246b].open {
-    width: 990px;
-    min-width: 990px;
-  } */
 }
 
 @media all and (max-width: 567px) {
   .svg-wrap {
     height: 100dvh;
   }
-  /* #diamonds-svg-id[data-v-5b63246b] {
-    width: 180vw;
-    min-width: 180vw;
-    height: 80%;
-    min-height: auto;
-  }
-  #diamonds-svg-id[data-v-5b63246b].open {
-    width: 180vw;
-    height: 80%;
-    min-height: auto;
-  } */
 }
-/* @media all and (max-width: 900px) {
-  #diamonds-svg-id[data-v-5b63246b] {
-    left: -12.5%;
-    width: 125vw;
-    height: 60vh;
-    min-height: auto;
-    top: 20vh;
-  }
-}
-@media all and (max-width: 700px) {
-  #diamonds-svg-id[data-v-5b63246b] {
-    left: -12.5%;
-    width: 125vw;
-  }
-}
-@media all and (max-width: 600px) {
-  #diamonds-svg-id[data-v-5b63246b] {
-    left: -25%;
-    width: 150vw;
-  }
-}
-@media all and (max-width: 500px) {
-  #diamonds-svg-id[data-v-5b63246b] {
-    left: -38%;
-    width: 175vw;
-  }
-}
-@media all and (max-width: 400px) {
-  #diamonds-svg-id[data-v-5b63246b] {
-    left: -75%;
-    width: 250vw;
-  }
-} */
-
-
-
 
 @media all and (max-width: 767px) {
   .svg-wrap {
     height: 100dvh;
   }
   #diamonds-svg-id[data-v-5b63246b] {
-    width: 160vw;
-    min-width: 160vw;
-    height: 100%;
+    width: 200vw;
+    min-width: 200vw;
+    height: 95%;
   }
   #diamonds-svg-id[data-v-5b63246b].open {
-    width: 160vw;
-    height: 100%;
+    width: 200vw;
+    height: 95%;
   }
 }
 
@@ -411,27 +245,28 @@ body {
     height: 100dvh;
   }
   #diamonds-svg-id[data-v-5b63246b] {
-    width: 180vw;
-    min-width: 180vw;
-    height: 80%;
+    width: 200vw;
+    min-width: 200vw;
+    height: 75%;
     min-height: auto;
   }
   #diamonds-svg-id[data-v-5b63246b].open {
-    width: 180vw;
-    height: 80%;
+    width: 200vw;
+    height: 75%;
     min-height: auto;
   }
 }
+
 @media all and (max-width: 478px) {
   #diamonds-svg-id[data-v-5b63246b] {
-    width: 190vw;
-    min-width: 190vw;
-    height: 65%;
+    width: 210vw;
+    min-width: 210vw;
+    height: 59%;
     min-height: auto;
   }
   #diamonds-svg-id[data-v-5b63246b].open {
-    width: 190vw;
-    height: 65%;
+    width: 210vw;
+    height: 59%;
     min-height: auto;
   }
 }
