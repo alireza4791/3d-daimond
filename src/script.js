@@ -826,7 +826,7 @@ const tick = () => {
   previousTime = elapsedTime
   if (daimondObj) {
     daimondObj.rotation.y += deltaTime / 5.5;
-    if (rotateDaimond && daimondObj.rotation.x <= 1.52 && daimondObj.rotation.x > 1.5) {
+    if (rotateDaimond && daimondObj.rotation.x <= 1.52) {
       daimondObj.rotation.x += deltaTime / 1.4;
     }
   }
@@ -1034,9 +1034,6 @@ window.addEventListener("load", () => {
     smallerPoints[4].style.offsetPath =
       "path('M 1492.402 696 L 813.862 472.575')";
   }, 3500);
-
-
-
   setTimeout(() => {
     rotateDaimond = false;
   }, 5650)
