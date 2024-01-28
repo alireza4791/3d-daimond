@@ -213,17 +213,6 @@ body {
     overflow: hidden;
   }
 }
-@media all and (max-width: 767px) {
-  .svg-wrap {
-    height: 100dvh;
-  }
-}
-
-@media all and (max-width: 567px) {
-  .svg-wrap {
-    height: 100dvh;
-  }
-}
 
 @media all and (max-width: 767px) {
   .svg-wrap {
@@ -238,9 +227,15 @@ body {
     width: 200vw;
     height: 95%;
   }
+  #diamonds-svg-id .outer-point-text[data-v-5b63246b] {
+    font-size: 1.7rem;
+  }
 }
 
 @media all and (max-width: 567px) {
+  #diamonds-svg-id .outer-point-text[data-v-5b63246b] {
+    font-size: 1.8rem;
+  }
   .svg-wrap {
     height: 100dvh;
   }
@@ -258,6 +253,9 @@ body {
 }
 
 @media all and (max-width: 478px) {
+  #diamonds-svg-id .outer-point-text[data-v-5b63246b] {
+    font-size: 1.85rem;
+  }
   #diamonds-svg-id[data-v-5b63246b] {
     width: 210vw;
     min-width: 210vw;
