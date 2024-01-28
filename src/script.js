@@ -654,26 +654,7 @@ var nAgt = navigator.userAgent;
 var verOffset;
 var fullVersion = '' + parseFloat(navigator.appVersion);
 
-objLoader.load('https://alireza4791.github.io/3d-daimond/dist/models/daimond/Diamond.obj', object => {
-  daimondObj = object;
-  daimondObj.scale.x = 0.94;
-  daimondObj.scale.y = 0.94;
-  daimondObj.scale.z = 0.94;
-  if (window.innerWidth <= 991) {
-    daimondObj.position.y = 0.2;
-    if (window.innerWidth <= 991 && window.innerWidth > 768) {
-      daimondObj.scale.x = 0.85;
-      daimondObj.scale.y = 0.85;
-      daimondObj.scale.z = 0.85;
-    }
-  }
-  daimondObj.rotation.x = 0.12;
-  daimondObj.children[0].material = new THREE.MeshPhongMaterial({
-    color: '#3c2660',
-    shininess: 50,
-  })
-  scene.add(daimondObj)
-})
+
 
 
 let rotateDaimond = false;
@@ -813,6 +794,27 @@ renderer.shadowMap.enabled = true
 renderer.shadowMap.type = THREE.PCFSoftShadowMap
 renderer.setSize(sizes.width, sizes.height)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+
+objLoader.load('https://alireza4791.github.io/3d-daimond/dist/models/daimond/Diamond.obj', object => {
+  daimondObj = object;
+  daimondObj.scale.x = 0.94;
+  daimondObj.scale.y = 0.94;
+  daimondObj.scale.z = 0.94;
+  if (window.innerWidth <= 991) {
+    daimondObj.position.y = 0.2;
+    if (window.innerWidth <= 991 && window.innerWidth > 768) {
+      daimondObj.scale.x = 0.85;
+      daimondObj.scale.y = 0.85;
+      daimondObj.scale.z = 0.85;
+    }
+  }
+  daimondObj.rotation.x = 0.12;
+  daimondObj.children[0].material = new THREE.MeshPhongMaterial({
+    color: '#3c2660',
+    shininess: 50,
+  })
+  scene.add(daimondObj)
+})
 
 /**
  * Animate
