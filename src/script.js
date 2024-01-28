@@ -475,7 +475,7 @@ style="
     "
   ></circle>
   <text
-    x="1340"
+    x="1330"
     y="256.606"
     alignment-baseline="middle"
     class="outer-point-text top-side"
@@ -498,7 +498,7 @@ style="
 
 
   <text
-    x="930"
+    x="940"
     y="700"
     alignment-baseline="middle"
     class="outer-point-text right-side top-side"
@@ -514,7 +514,7 @@ style="
   text-anchor="middle"
   class="outer-point-text right-side top-side"
   x="1186.87103190612794"
-  y="890.0882655792236"
+  y="919"
 >
   افتخارات
 </text>
