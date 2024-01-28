@@ -795,6 +795,8 @@ renderer.shadowMap.type = THREE.PCFSoftShadowMap
 renderer.setSize(sizes.width, sizes.height)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
+resize();
+
 objLoader.load('https://alireza4791.github.io/3d-daimond/dist/models/daimond/Diamond.obj', object => {
   daimondObj = object;
   daimondObj.scale.x = 0.94;
@@ -849,7 +851,6 @@ tick()
 
 
 window.addEventListener("load", () => {
-  resize();
   let pointerCircles = document.querySelectorAll(".outer-point-stroke");
   let pointerTexts = document.querySelectorAll(".outer-point-text");
   let greenPointer = document.querySelector(".movie-pointer");
